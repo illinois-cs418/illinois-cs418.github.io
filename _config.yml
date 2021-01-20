@@ -30,7 +30,13 @@ collections:
     output: true
   projects:
     output: true
-
+    
+header_pages:
+  - course-calendar.md
+  - assignments.md
+  - resources.md
+  - officehours.md
+  
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
