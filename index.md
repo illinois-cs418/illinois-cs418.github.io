@@ -41,7 +41,7 @@ The course will be taught using online lectures along with suggested additional 
 + We will focus on actively working through problems and doing code walkthroughs... 
 + These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
-+ We know attending online synchronous lectures can be difficult, so there is no required attendance. **If you can attend the Tuesday lecture, please do so.**
++ We know attending online synchronous lectures can be difficult, so there is no required attendance. 
 
 
 ## Assessments ##
@@ -70,7 +70,7 @@ This class will have three midterm exams and no final exam. Each exam is on the 
 - Exam 2: 11am-12pm, April 1, 2021
 - Exam 3: 11am-12pm, May 4, 2021
 
-The exams will be online using Prairielearn. **They will be synchronous and available from 9am-10am Central Time on the day of the exam**
+The exams will be online using Prairielearn. **They will be synchronous and will last for 1 hour from 11am-12pm Central Time on the day of the exam**
 They are open web - you can use any reference material you wish while taking the exam. You should not collaborate with other people. Any instances of collaboration will be considered a violation of academic integrity and will result in a 0 on the exam and a letter grade reduction in the final course grade. Also, the nature of the exam will make collaboration unhelpful - you will get a better grade working on your own rather than wasting time trying to work together.  
 
 ## Grades ##
