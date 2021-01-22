@@ -32,12 +32,12 @@ We recommend the following courses and skills:
 
 The course will be taught using online lectures along with suggested additional reading materials.
 
-+ Lectures videos and notes will be available [here]() with new lectures available **Tuesday of each week**.
-+ Additional reading may be assigned from resources listed [here]().
++ Lectures videos and notes will be available **[here](https://illinois-cs418.github.io/schedule) with new lectures available Tuesday of each week.**
++ Additional reading may be assigned from **resources listed [here](https://illinois-cs418.github.io/resources).**
 
-#### Lectures ####
+### Lectures ###
 
-**You can attend live lectures at 11am Central Time on Tuesdays at this [Zoom link]()**.
+**You can attend live lectures/discussions at 11am Central Time on Tuesdays at this [Zoom link](https://illinois.zoom.us/j/81462506478?pwd=NmVKMmJZRk5WcXJIZ2RGTmJxOTl2Zz09)**.
 + We will focus on actively working through problems and doing code walkthroughs... 
 + These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
@@ -46,8 +46,8 @@ The course will be taught using online lectures along with suggested additional 
 
 ## Assessments ##
 
-+ Assigned work will include 10 quizzes, 6 programming assignments and 3 exams.<br/>
-+ There will be an additional project for students taking the course for 4 credits.
+Assigned work will include 10 quizzes, 6 programming assignments and 3 exams.<br/>
+There will be an additional project for students taking the course for 4 credits.
 
 ### Weekly Quizes ###
 There will be short weekly quizzes on PrairieLearn. 
@@ -66,9 +66,9 @@ If you are taking the course for 4 credits, you will complete an extra project i
 ### Exams ###
 This class will have three midterm exams and no final exam. Each exam is on the PrairieLearn platform.
 
-- Exam 1: 11am-12pm, , 2021 
-- Exam 2: 11am-12pm, , 2021
-- Exam 3: 11am-12pm, , 2021
+- Exam 1: 11am-12pm, Feb. 25, 2021 
+- Exam 2: 11am-12pm, April 1, 2021
+- Exam 3: 11am-12pm, May 4, 2021
 
 The exams will be online using Prairielearn. **They will be synchronous and available from 9am-10am Central Time on the day of the exam**
 They are open web - you can use any reference material you wish while taking the exam. You should not collaborate with other people. Any instances of collaboration will be considered a violation of academic integrity and will result in a 0 on the exam and a letter grade reduction in the final course grade. Also, the nature of the exam will make collaboration unhelpful - you will get a better grade working on your own rather than wasting time trying to work together.  
