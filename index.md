@@ -46,27 +46,29 @@ The course will be taught using online lectures along with suggested additional 
 
 ## Assessments ##
 
-Assigned work will include 10 quizzes, 6 programming assignments and 3 exams. There will be an additional project for students taking the course for 4 credits.
++ Assigned work will include 10 quizzes, 6 programming assignments and 3 exams.<br/>
++ There will be an additional project for students taking the course for 4 credits.
 
-#### Weekly Quizes ####
+### Weekly Quizes ###
 There will be short weekly quizzes on PrairieLearn. 
 + **Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
 + **They will be assigned on Tueday and due at 11:59PM on Tuesday of the following week.**
 + **After the due date, quizzes can still be completed late for 75% credit at any time before May 9.**
 + These quizzes will be based on the lecture material and will serve as practice for the exams.
 
-#### Programming Assignments ####
-There will a series of six programming assignments. **Please read the [Assignments page](/assignments) for details of how code development will be done.**
+### Programming Assignments ###
+There will a series of six programming assignments. <br/>
+**Please read the [Assignments page](/assignments) for details of how code development will be done.**
 
-#### 4 Credit Project ####
+### 4 Credit Project ###
 If you are taking the course for 4 credits, you will complete an extra project implelementing a ray-tracer.
 
-#### Exams ####
+### Exams ###
 This class will have three midterm exams and no final exam. Each exam is on the PrairieLearn platform.
 
-- Exam 1: 11am-12pm, Sept. 30, 2021 
-- Exam 2: 9am-10am, Nov. 11, 2021
-- Exam 3: 9am-10am, Dec. 9, 2021
+- Exam 1: 11am-12pm, , 2021 
+- Exam 2: 11am-12pm, , 2021
+- Exam 3: 11am-12pm, , 2021
 
 The exams will be online using Prairielearn. **They will be synchronous and available from 9am-10am Central Time on the day of the exam**
 They are open web - you can use any reference material you wish while taking the exam. You should not collaborate with other people. Any instances of collaboration will be considered a violation of academic integrity and will result in a 0 on the exam and a letter grade reduction in the final course grade. Also, the nature of the exam will make collaboration unhelpful - you will get a better grade working on your own rather than wasting time trying to work together.  
