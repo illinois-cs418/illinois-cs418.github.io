@@ -7,7 +7,7 @@ permalink: /resources
 ## Coding References ##
 
 ### HTML ###
-+General HTML information: [Mozilla HTML Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
++ General HTML information: [Mozilla HTML Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 + How to create input elements in HTML and access input in JS: [Mozilla HTML input element documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
@@ -34,6 +34,7 @@ _Fundamentals of Computer Graphics 4th Edition_ by Steve Marschner, Peter Shirle
 <br/>
 <br/>
 ![3D Math Primer for Graphics and Game Development 2nd Edition by Fletcher Dunn and Ian Parberry](/img/3dmath.jpg){:height="200px" width="160px"}
+
 _3D Math Primer for Graphics and Game Development 2nd Edition_ by Fletcher Dunn and Ian Parberry 
 [UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99671950512205899)
 
