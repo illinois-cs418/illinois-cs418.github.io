@@ -50,7 +50,7 @@ Assigned work will include 10 quizzes, 6 programming assignments and 3 exams.<br
 There will be an additional project for students taking the course for 4 credits.
 
 ### Weekly Quizzes ###
-There will be short weekly quizzes on PrairieLearn. 
+There will be short weekly quizzes on [PrairieLearn](https://prairielearn.engr.illinois.edu/pl). 
 + **Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
 + **They will be assigned on Tueday and due at 11:59PM on Tuesday of the following week.**
 + **After the due date, quizzes can still be completed late for 75% credit at any time before May 9.**
@@ -118,8 +118,6 @@ We will use Campuswire for answering questions. Use the code 5240 to join as a s
 + We will attempt to help debug upon request but ultimately debugging is your responsibility.
 + When you ask for help debugging, provide a clear statement of the bug behavior and how you attempted to debug so far.
 + You are allowed to post code snippets when asking for help debugging.
-
-Click the header to join/view the forum. You do not need a passcode.
 
 #### Course Staff ####
 See the [schedule for office hours](/officehours).
