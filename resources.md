@@ -5,20 +5,29 @@ permalink: /resources
 
 #### Coding ####
 
+HTML
+
+JavaScript
+
+WebGL
+
+
+
+
 #### Reading ####
 
-There is no book for the class. Notes and other materials will be posted online on the [course schedule](https://illinois-cs418.github.io/schedule).
-We do have some suggested books:
+For the algorithmic and theoretical components of the course, the posted lecture notes should be sufficient. <br/>
+We will 
 
 ![Fundamentals of Computer Graphics 4th Edition by Steve Marschner, Peter Shirley](/img/shirley.jpg){:height="200px" width="160px"}
 
 _Fundamentals of Computer Graphics 4th Edition_ by Steve Marschner, Peter Shirley  
 Deals with the theoretical and mathematical aspects of computer graphics. Very readable.  
-[UIUC Library E-book link](https://vufind.carli.illinois.edu/vf-uiu/Record/uiu_8503840)
+[UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99945011412205899)
 
-![WebGL Programming Guide: Interactive 3D Graphics Programming with WebGL by Kouichi Matsuda and Rodger Lea](/img/wengl1.jpg){:height="200px" width="200px"}
+![3D Math Primer for Graphics and Game Development 2nd Edition by Fletcher Dunn and Ian Parberry](/img/3DMath.jpg){:height="200px" width="160px"}
+_3D Math Primer for Graphics and Game Development 2nd Edition_ by Fletcher Dunn and Ian Parberry 
+[UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99671950512205899)
 
-_WebGL Programming Guide: Interactive 3D Graphics Programming with WebGL_  
-by Kouichi Matsuda and Rodger Lea  
-A bit old now, but pretty easy to read with decent example code.   
-[UIUC Library E-book link](https://vufind.carli.illinois.edu/vf-uiu/Record/uiu_8494400)  
+
+
