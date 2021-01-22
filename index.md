@@ -114,7 +114,7 @@ The course grade cutoffs can be expected to be:
 #### [Campuswire](https://campuswire.com/p/G2964AC2F) ####
 We will use Campuswire for answering questions. Use the code 5240 to join as a student.
 
-+ Any question involving a grade should be asked privately.
++ For any question involving a grade you should select "Post to instructors and TAs" .
 + We will attempt to help debug upon request but ultimately debugging is your responsibility.
 + When you ask for help debugging, provide a clear statement of the bug behavior and how you attempted to debug so far.
 + You are allowed to post code snippets when asking for help debugging.
