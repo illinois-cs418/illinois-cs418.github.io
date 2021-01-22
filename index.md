@@ -18,7 +18,7 @@ The topics we will cover include:
 + Shading and programmable shaders
 + Rasterization
 + Physics simulation
-+ Physically-based rendering
++ Basic animation
 
 We will learn how to implement 3D web applications using WebGL and JavaScript. WebGL shares many of the same characteristics as Vulkan, Direct3D, and other popular low-level graphics APIs, so the skills you learn should be transferable.
 
@@ -32,31 +32,28 @@ We recommend the following courses and skills:
 
 The course will be taught using online lectures along with suggested additional reading materials.
 
-+ Lectures videos and notes will be available here with new lectures available Tuesday of each week.
-+ Additional reading may be assigned from resources liseted here.
++ Lectures videos and notes will be available [here]() with new lectures available **Tuesday of each week**.
++ Additional reading may be assigned from resources listed [here]().
 
 #### Lectures ####
 
-+ **You can attend live lectures at 11am Central Time on Thursdays at this [Zoom link](https://illinois.zoom.us/j/93019304365?pwd=elBOT0Nrayt2YW1NVlA4NFB2dVR2Zz09)**.
-We will focus on actively working through problems and doing code walkthroughs. These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
-
+**You can attend live lectures at 11am Central Time on Tuesdays at this [Zoom link]()**.
++ We will focus on actively working through problems and doing code walkthroughs... 
++ These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
-
-**You can expect new lectures to be posted by the end of the day on Mondays.** 
-
-We know attending online synchronous lectures can be difficult, so there is no required attendance. **If you can attend the Thursday lecture, please do so.**
++ We know attending online synchronous lectures can be difficult, so there is no required attendance. **If you can attend the Tuesday lecture, please do so.**
 
 
 ## Assessments ##
 
-Assigned work will include 10 quizzes, 6 programming assignments and 3 exams. there will be an additional project for students taking the course for 4 credits.
+Assigned work will include 10 quizzes, 6 programming assignments and 3 exams. There will be an additional project for students taking the course for 4 credits.
 
 #### Weekly Quizes ####
-There will be short weekly quizzes on PrairieLearn. These quizzes will be based on the lecture material and will serve as practice for the exams
-**Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
-
-+ **They will be assigned on Monday and due on Friday of the same week.**
-+ They can be completed late for 75% credit at any time before May 9.
+There will be short weekly quizzes on PrairieLearn. 
++ **Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
++ **They will be assigned on Tueday and due at 11:59PM on Tuesday of the following week.**
++ **After the due date, quizzes can still be completed late for 75% credit at any time before May 9.**
++ These quizzes will be based on the lecture material and will serve as practice for the exams.
 
 #### Programming Assignments ####
 There will a series of six programming assignments. **Please read the [Assignments page](/assignments) for details of how code development will be done.**
