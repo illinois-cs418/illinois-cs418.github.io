@@ -3,21 +3,30 @@ layout: page
 permalink: /resources
 ---
 
-#### Coding ####
+## Coding ##
 
-HTML
+### HTML ###
++[Mozilla HTML Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-JavaScript
++ How to create input elements in HTML and accessing the input in JavaScript:<br/>
+[Mozilla <input> element documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
-WebGL
+### JavaScript ###
++ [Mozilla JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+### WebGL ###
++ [Mozilla WebGL Docs](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) <br/>
+These include both totroials and the API Description. Both of these will be useful.
 
+### glMatrix JS Math Library ###
++[glMatrix Library Download](https://glmatrix.net/) <br/>
+Use the most recent version of the library. 
++ [glMatrix Library Docs](https://glmatrix.net/docs/)
 
-
-#### Reading ####
+## Reading ##
 
 For the algorithmic and theoretical components of the course, the posted lecture notes should be sufficient. <br/>
-We will 
+We will sometimes post suggested reading from the following: 
 
 ![Fundamentals of Computer Graphics 4th Edition by Steve Marschner, Peter Shirley](/img/shirley.jpg){:height="200px" width="160px"}
 
