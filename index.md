@@ -37,7 +37,7 @@ The course will be taught using online lectures along with suggested additional 
 
 ### Lectures ###
 
-**You can attend live lectures/discussions at 11am Central Time on Tuesdays at this [Zoom link](https://illinois.zoom.us/j/81462506478?pwd=NmVKMmJZRk5WcXJIZ2RGTmJxOTl2Zz09)**.
+**You can attend live lectures/discussions at 11am Central Time on Thursdays at this [Zoom link](https://illinois.zoom.us/j/81462506478?pwd=NmVKMmJZRk5WcXJIZ2RGTmJxOTl2Zz09)**.
 + We will focus on actively working through problems and doing code walkthroughs... 
 + These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
@@ -49,7 +49,7 @@ The course will be taught using online lectures along with suggested additional 
 Assigned work will include 10 quizzes, 6 programming assignments and 3 exams.<br/>
 There will be an additional project for students taking the course for 4 credits.
 
-### Weekly Quizes ###
+### Weekly Quizzes ###
 There will be short weekly quizzes on PrairieLearn. 
 + **Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
 + **They will be assigned on Tueday and due at 11:59PM on Tuesday of the following week.**
