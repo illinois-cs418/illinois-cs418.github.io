@@ -64,7 +64,7 @@ There will a series of six programming assignments. <br/>
 If you are taking the course for 4 credits, you will complete an extra project implelementing a ray-tracer.
 
 ### Exams ###
-This class will have three midterm exams and no final exam. Each exam is on the PrairieLearn platform.
+This class will have three midterm exams and no final exam. Each exam is on [PrairieLearn](https://prairielearn.engr.illinois.edu/pl).
 
 - Exam 1: 11am-12pm, Feb. 25, 2021 
 - Exam 2: 11am-12pm, April 1, 2021
