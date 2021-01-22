@@ -4,20 +4,22 @@ title: Resources
 permalink: /resources
 ---
 
-## Coding ##
+## Coding References ##
 
 ### HTML ###
-+[Mozilla HTML Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
++General HTML information:<br/>
+[Mozilla HTML Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 + How to create input elements in HTML and accessing the input in JavaScript:<br/>
-[Mozilla <input> element documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+[Mozilla HTML input element documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
 ### JavaScript ###
-+ [Mozilla JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
++ JavaScript tutorials and reference: <br/>
+[Mozilla JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### WebGL ###
-+ [Mozilla WebGL Docs](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) <br/>
-These include both totroials and the API Description. Both of these will be useful.
++ WebGL tutorials and API reference: <br/>
+[Mozilla WebGL Docs](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) <br/>
 
 ### glMatrix JS Math Library ###
 +[glMatrix Library Download](https://glmatrix.net/) <br/>
@@ -35,7 +37,7 @@ _Fundamentals of Computer Graphics 4th Edition_ by Steve Marschner, Peter Shirle
 Deals with the theoretical and mathematical aspects of computer graphics. Very readable.  
 [UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99945011412205899)
 
-![3D Math Primer for Graphics and Game Development 2nd Edition by Fletcher Dunn and Ian Parberry](/img/3DMath.jpg){:height="200px" width="160px"}
+![3D Math Primer for Graphics and Game Development 2nd Edition by Fletcher Dunn and Ian Parberry](/img/3dmath.jpg){:height="200px" width="160px"}
 _3D Math Primer for Graphics and Game Development 2nd Edition_ by Fletcher Dunn and Ian Parberry 
 [UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99671950512205899)
 
