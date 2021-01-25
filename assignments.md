@@ -41,11 +41,5 @@ To submit a regrade request:
 - Include a brief explanation of why you think your grade is incorrect.
 - You must submit regrade requests within one week after we release grades on a given assignment.
 
-For MPs:
-
-- The course staff will regrade MPs.
-- Major issues (e.g. a submission issue resulted in a zero) have priority over minor issues (e.g. lost points on one small feature of the MP).
-- We may not regrade your work until after all MPs have finished.
-
 ## Academic Integrity ##
 You should be familiar with the Student Code [definitions on academic integrity](http://studentcode.illinois.edu/article1_part4_1-401.html). We expect you to abide by them.
