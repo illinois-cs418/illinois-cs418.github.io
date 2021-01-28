@@ -11,7 +11,7 @@
   title: "Geometric Modeling" 
 - 
   date: "Week 1 (Jan 28)"
-  materials: "[Course Mechanics PDF]() <br/>
-          [WebGL PDF]()"
+  materials: " Introduction to WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-WebGL.pdf) <br/>
+          [HelloTriangle.html](https://illinois-cs418.github.io/Examples/WebGL2/HelloTriangle/HelloTriangle.html)"
   title: "Course Orientation and WebGL Intro"
 
