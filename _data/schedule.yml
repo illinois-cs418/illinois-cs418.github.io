@@ -11,7 +11,19 @@
   title: "Geometric Modeling" 
 - 
   date: "Week 1 (Jan 28)"
-  materials: " Introduction to WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-WebGL.pdf) <br/>
+  materials: " Introduction to WebGL [Video](https://classtranscribe.illinois.edu/video?id=4405c914-71a9-457f-8d1c-eabf07b4a393&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-WebGL.pdf) <br/>
           [HelloTriangle.html](https://illinois-cs418.github.io/Examples/WebGL2/HelloTriangle/HelloTriangle.html)"
   title: "Course Orientation and WebGL Intro"
+- 
+  date: "Week 2 (Feb 2)"
+  materials: "Transformations: Scale and Translation [Video](https://classtranscribe.illinois.edu/video?id=4f3806ff-6106-41de-911f-ea3ad9d80a97&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-4-1-Affine Transformations.pdf) <br/>
+              Transformations: Rotations and 3D [Video](https://classtranscribe.illinois.edu/video?id=c4ff26cb-2a4c-4ea0-8d35-b586892a62c1&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-4-2-Affine Transformations.pdf) "
+  title: "Affine Transformations"
+- 
+  date: "Week 2 (Feb 4)"
+  materials: " MP 1 Walkthrough [Video]()&nbsp;[PDF]() <br/>
+          Animation in WebGL [Video]()&nbsp;[PDF]()"
+  title: "Basic Animation"
+
+
 
