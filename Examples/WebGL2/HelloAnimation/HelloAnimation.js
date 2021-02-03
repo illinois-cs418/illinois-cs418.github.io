@@ -1,6 +1,8 @@
 /**
  * @file A simple WebGL example drawing a triangle with colors
- * @author Eric Shaffer <shaffer1@eillinois.edu>  
+ * @author Eric Shaffer <shaffer1@eillinois.edu>
+ * 
+ * Updated Spring 2021 to use WebGL 2.0 and GLSL 3.00
  */
 
 /** @global The WebGL context */
@@ -14,18 +16,21 @@ var shaderProgram;
 
 /** @global The WebGL buffer holding the triangle */
 var vertexPositionBuffer;
-
 /** @global The WebGL buffer holding the vertex colors */
 var vertexColorBuffer;
+
+/** @global The vertex array object for the triangle */
+var vertexArrayObject;
 
 /** @global The rotation angle of our triangle */
 var rotAngle = 0;
 
 /** @global The ModelView matrix contains any modeling and viewing transformations */
-var mvMatrix = glMatrix.mat4.create();
+var modelViewMatrix = glMatrix.mat4.create();
 
 /** @global Records time last frame was rendered */
 var previousTime = 0;
+
 
 /**
  * Translates degrees to radians
@@ -35,6 +40,7 @@ var previousTime = 0;
 function degToRad(degrees) {
         return degrees * Math.PI / 180;
 }
+
 
 /**
  * Creates a context for WebGL
@@ -53,8 +59,10 @@ function createGLContext(canvas) {
   return context;
 }
 
+
 /**
- * Loads Shaders
+ * Loads a shader.
+ * Retrieves the source code from the HTML document and compiles it.
  * @param {string} id ID string for shader to load. Either vertex shader/fragment shader
  */
 function loadShaderFromDOM(id) {
@@ -87,13 +95,16 @@ function loadShaderFromDOM(id) {
   return shader;
 }
 
+
 /**
- * Setup the fragment and vertex shaders
+ * Set up the fragment and vertex shaders.
  */
 function setupShaders() {
+  // Compile the shaders' source code.
   vertexShader = loadShaderFromDOM("shader-vs");
   fragmentShader = loadShaderFromDOM("shader-fs");
   
+  // Link the shaders together into a program.
   shaderProgram = gl.createProgram();
   gl.attachShader(shaderProgram, vertexShader);
   gl.attachShader(shaderProgram, fragmentShader);
@@ -103,33 +114,54 @@ function setupShaders() {
     alert("Failed to setup shaders");
   }
 
+  // We only use one shader program for this example, so we can just bind
+  // it as the current program here.
   gl.useProgram(shaderProgram);
-    
-  // Get the positions of the atytributes and uniforms in the shader program     
-  shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
-  shaderProgram.vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor"); 
-  shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMvMatrix"); 
 
-  //Enable the attribute variables we will send data to....     
+  // Create the vertex array object, which holds the list of attributes for
+  // the triangle.
+  vertexArrayObject = gl.createVertexArray();
+  gl.bindVertexArray(vertexArrayObject);
+    
+  // Query the index of each attribute in the list of attributes maintained
+  // by the GPU. 
+  shaderProgram.vertexPositionAttribute =
+    gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  shaderProgram.vertexColorAttribute =
+    gl.getAttribLocation(shaderProgram, "aVertexColor");
+  shaderProgram.modelViewMatrixUniform =
+    gl.getUniformLocation(shaderProgram, "uModelViewMatrix");
+
+  // Enable each attribute we are using in the VAO.  
   gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
   gl.enableVertexAttribArray(shaderProgram.vertexColorAttribute);
 }
 
+
 /**
- * Populate buffers with data
+ * Set up the buffers to hold the triangle's vertex positions and colors.
  */
 function setupBuffers() {
+  // Create a buffer for positions, and bind it to the vertex array object.
   vertexPositionBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
-  var triangleVertices = [
+
+  // Define a triangle in clip coordinates.
+  var vertices = [
          0.0,  0.5,  0.0,
         -0.5, -0.5,  0.0,
          0.5, -0.5,  0.0
   ];
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.STATIC_DRAW);
+  // Populate the buffer with the position data.
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
   vertexPositionBuffer.itemSize = 3;
   vertexPositionBuffer.numberOfItems = 3;
-    
+
+  // Binds the buffer that we just made to the vertex position attribute.
+  gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 
+                         vertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+  
+  // Do the same steps for the color buffer.
   vertexColorBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexColorBuffer);
   var colors = [
@@ -140,62 +172,68 @@ function setupBuffers() {
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
   vertexColorBuffer.itemSize = 4;
   vertexColorBuffer.numItems = 3;  
-    
+  gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, 
+                         vertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
 }
 
+
 /**
- * Draw model...render a frame
+ * Draws a frame to the screen.
  */
-function draw() { 
-  gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight); 
+function draw() {
+  // Transform the clip coordinates so the render fills the canvas dimensions.
+  gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
+
+  // Clear the screen.
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  // If these buffers don't change, you can set the atribute pointer just once at 
-  //  rather than each frame      
-  gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
-  gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 
-                         vertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+  // Use the vertex array object that we set up.
+  gl.bindVertexArray(vertexArrayObject);
     
-  gl.bindBuffer(gl.ARRAY_BUFFER, vertexColorBuffer);
-  gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, 
-                            vertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
+  // Send the ModelView matrix with our transformations to the vertex shader.
+  gl.uniformMatrix4fv(shaderProgram.modelViewMatrixUniform,
+                      false, modelViewMatrix);
     
-    
-  // Send the current  ModelView matrix to the vertex shader
-  gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, mvMatrix);
-    
-  // Render the triangle    
+  // Render the triangle. 
   gl.drawArrays(gl.TRIANGLES, 0, vertexPositionBuffer.numberOfItems);
+  
+  // Unbind the vertex array object to be safe.
+  gl.bindVertexArray(null);
 }
 
-/**
- * Function updates geometry and repeatedly renders frames.
- */
- function animate(now) {
-  var speed =   document.getElementById("speed").value;
 
-  draw();
-     
-  // Convert the time to seconds
-  now *= 0.001;
-  // Subtract the previous time from the current time
-  var deltaTime = now - previousTime;
-     
+/**
+ * Animates the triangle by updating the ModelView matrix with a rotation
+ * each frame.
+ */
+ function animate(currentTime) {
+  // Read the speed slider from the web page.
+  var speed = document.getElementById("speed").value;
+
+  // Convert the time to seconds.
+  currentTime *= 0.001;
+  // Subtract the previous time from the current time.
+  var deltaTime = currentTime - previousTime;
   // Remember the current time for the next frame.
-  previousTime = now;
+  previousTime = currentTime;
      
-  //Update geometry to rotate speed degrees per second
-  rotAngle += speed*deltaTime;
+  // Update geometry to rotate 'speed' degrees per second.
+  rotAngle += speed * deltaTime;
   if (rotAngle > 360.0)
       rotAngle = 0.0;
-  glMatrix.mat4.fromZRotation(mvMatrix, degToRad(rotAngle));
+  glMatrix.mat4.fromZRotation(modelViewMatrix, degToRad(rotAngle));
+
+  // Draw the frame.
+  draw();
   
-  // ....next frame
-   requestAnimationFrame(animate);
+  // Animate the next frame. The animate function is passed the current time in
+  // milliseconds.
+  requestAnimationFrame(animate);
 }
 
+
 /**
- * Startup function called from html code to start program.
+ * Startup function called from html code to start the program.
  */
  function startup() {
   console.log("No bugs so far...");
