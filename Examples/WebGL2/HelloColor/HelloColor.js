@@ -1,5 +1,5 @@
 /**
- * @file A simple WebGL example drawing a triangle with colors
+ * @file A simple WebGL 2.0 example drawing a triangle with colors.
  * @author Eric Shaffer <shaffer1@illinois.edu>
  * 
  * Updated Spring 2021 by Ian Rudnick <itr2@illinois.edu>
