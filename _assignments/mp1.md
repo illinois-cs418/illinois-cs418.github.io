@@ -66,17 +66,17 @@ You should use a *Vertex Array Object (VAO)* to contain the state information fo
 An example of how all this is done can be found in the HelloAnimation example from [the Feb. 4 lecture](https://illinois-cs418.github.io/schedule).
 
 #### Coordinate System
-![clip space](/img/clip.png){:width="300px"}
+![clip space](/img/clip.png){:width="500px"}
 
-The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $$(0,0,0)$$ in which all visible geometry has coordinates in the range $$[-1,1]$$. This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $$(X,Y,0)$$ so you are drawing in the $Z=0$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $$[-100,100]$$ and simply divide by $100$ when you type in the vertex coordinates...or your code could do the division.  
+The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $$(0,0,0)$$ in which all visible geometry has coordinates in the range $$[-1,1]$$. This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $$(X,Y,0)$$ so you are drawing in the $$Z=0$$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $$[-100,100]$$ and simply divide by $$100$$ when you type in the vertex coordinates...or your code could do the division.  
 
 WebGL *clip space* is a left-handed coordinate system. If you enable hidden surface removal using the view you see is essentially from the location $$(0,0,-1)$$ looking down the $$Z^+$$ axis. For this MP, since you are working in 2D, you do not necessarily need to enable hidden surface removal.
 
-To enable hidden surface removal in WebGL you call 
-`gl.enable(gl.DEPTH_TEST);` 
-at startup and then call 
-`gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);` 
-each time you wish to draw a new frame.
+To enable hidden surface removal in WebGL you call<br/> 
+`gl.enable(gl.DEPTH_TEST);`<br/>  
+at startup and then call <br/> 
+`gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);`<br/>  
+each time you wish to draw a new frame.<br/> 
 
 ### Rendering
 
@@ -90,7 +90,33 @@ You will need to write code to change the location of vertices over time to anim
 
 2. Implement another motion by directly changing the vertex positions in the vertex buffer. This means you create a new JavaScript array with vertex position. For example, you may have code the does something like this:
 
-![code](/img/code1.PNG)
+~~~ javascript
+gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
+    
+// Start with vertex at the origin    
+var triangleVertices = [0.0,0.0,0.0];
+
+//Generate a triangle fan around origin
+  var radius=0.5
+  var z=0.0;
+  
+  for (i=0;i<numVertices;i++){
+      angle = i *  2 * Math.PI / numVertices;
+      x=(radius * Math.cos(angle));
+      y=(radius * Math.sin(angle));
+      
+      //add the vertex coordinates to the array
+      triangleVertices.push(x+pointOffset[0]);
+      triangleVertices.push(y+pointOffset[1]);
+      triangleVertices.push(z);
+  }
+  triangleVertices.push(triangleVertices[3]);
+  triangleVertices.push(triangleVertices[4]);
+  triangleVertices.push(z); 
+    
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.DYNAMIC_DRAW);
+
+~~~
     
 Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
 
@@ -123,11 +149,26 @@ You should add a radio to your HTML as described in the [Mozilla HTML Docs here]
 
 An example of how to do this would be:
 
-![code](/img/code2.PNG)
+~~~ html
+<p>Select an animation:</p>
+<div>
+<input type="radio" id="I" name="animation" value="I" checked>
+<label for="I">Illinois Logo</label>
+</div>
+<div>
+<input type="radio" id="MyAnimation" name="animation" value="MyAnimation">
+<label for="MyAnimation"> Your Animation Name Here</label>
+</div>
+~~~
 
 To query to see if a button is checked in JavaScript you would do the following:
 
-![code](/img/code3.PNG)
+~~~ javascript
+if (document.getElementById("I").checked == true)
+        {
+            //bind the VAO for the I logo
+        }
+~~~
 
 Based on which button is checked, you will choose which VAO to bind before calling `gl.drawArrays`. if you use a different shader program for your second animation, you will need to specify which program to use by invoking `gl.useProgram`.
 
