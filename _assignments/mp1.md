@@ -66,7 +66,7 @@ You should use a *Vertex Array Object (VAO)* to contain the state information fo
 An example of how all this is done can be found in the HelloAnimation example from [the Feb. 4 lecture](https://illinois-cs418.github.io/schedule).
 
 #### Coordinate System
-![clip space](/img/clip.png)
+![clip space](/img/clip.png){:width="100px"}
 
 The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $$(0,0,0)$$ in which all visible geometry has coordinates in the range $$[-1,1]$$. This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $$(X,Y,0)$$ so you are drawing in the $Z=0$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $$[-100,100]$$ and simply divide by $100$ when you type in the vertex coordinates...or your code could do the division.  
 
@@ -86,7 +86,7 @@ You will need to write code to change the location of vertices over time to anim
 
 2. Implement another motion by directly changing the vertex positions in the vertex buffer. This means you create a new JavaScript array with vertex position. For example, you may have code the does something like this:
 
-![code](/img/code1.png)
+![code](/img/code1.PNG)
     
 Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
 
@@ -119,10 +119,12 @@ You should add a radio to your HTML as described in the [Mozilla HTML Docs here]
 
 An example of how to do this would be:
 
-![code](/img/code2.png)
+![code](/img/code2.PNG)
 
 To query to see if a button is checked in JavaScript you would do the following:
 
-![code](/img/code3.png)
+![code](/img/code3.PNG)
 
-Based on which button is checked, you will choose which VAO to bind before calling `gl.drawArrays`. if you use a different shader program for your second animation, you will need to specify which program to use by invoking `gl.useProgram`. **Be aware that using multiple shader programs requires attention to detail.** The attribute variables may have different names and indices so you need to make sure you use the correct ones when setting up the VAOs. The uniform variables may also have different names and indices and you will need to use the correct ones when calling `gl.uniformMatrix4fv` to send a matrix to the shader program, for example. You are not required to use two different shader programs for this MP.
+Based on which button is checked, you will choose which VAO to bind before calling `gl.drawArrays`. if you use a different shader program for your second animation, you will need to specify which program to use by invoking `gl.useProgram`.
+
+**Be aware that using multiple shader programs requires attention to detail.** The attribute variables may have different names and indices so you need to make sure you use the correct ones when setting up the VAOs. The uniform variables may also have different names and indices and you will need to use the correct ones when calling `gl.uniformMatrix4fv` to send a matrix to the shader program, for example. You are not required to use two different shader programs for this MP.
