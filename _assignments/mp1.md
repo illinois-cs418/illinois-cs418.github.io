@@ -59,7 +59,7 @@ You will need to model the logo with a 2-D mesh of triangles. One approach to cr
 
 Specifically, in the starter code you will want to modify `setupBuffers` and create a buffer to hold the vertex positions. Those coordinates should be sent down to the vertex shader to feed attributes of the type `in vec3`. 
 
-For the color, we would like you to use a color attribute rather than simply setting the color to orange in the fragment shader. You should create a color buffer with one color per vertex. These colors will be of the form $(R,G,B,1)$ where the RGB color channels are in the range $[0,1]$. The 4th element of a color is the *alpha* channel which indicates transparency. Since our logo is completely opaque we set $\alpha=1$ for each color. The colors should feed attributes of the type `in vec4` in the vertex shader.
+For the color, we would like you to use a color attribute rather than simply setting the color to orange in the fragment shader. You should create a color buffer with one color per vertex. These colors will be of the form $$(R,G,B,1)$$ where the RGB color channels are in the range $$[0,1]$$. The 4th element of a color is the *alpha* channel which indicates transparency. Since our logo is completely opaque we set $$\alpha=1$$ for each color. The colors should feed attributes of the type `in vec4` in the vertex shader.
 
 You should use a *Vertex Array Object (VAO)* to contain the state information for these attributes. The state of both attributes being active should be contained in a single VAO. You activate a VAO by calling `gl.bindVertexArray` before calling `gl.drawArrays`
 
@@ -67,9 +67,9 @@ An example of how all this is done can be found in the HelloAnimation example fr
 
 #### Coordinate System
 
-The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $(0,0,0)$ in which all visible geometry has coordinates in the range $[-1,1]$. This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $(X,Y,0)$ so you are drawing in the $Z=0$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $[-100,100]$ and simply divide by $100$ when you type in the vertex coordinates...or your code could do the division.  
+The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $$(0,0,0)$$ in which all visible geometry has coordinates in the range $$[-1,1]$$. This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $$(X,Y,0)$$ so you are drawing in the $Z=0$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $$[-100,100]$$ and simply divide by $100$ when you type in the vertex coordinates...or your code could do the division.  
 
-WebGL *clip space* is a left-handed coordinate system. If you enable hidden surface removal using the view you see is essentially from the location $(0,0,-1)$ looking down the $Z^+$ axis. For this MP, since you are working in 2D, you do not necessarily need to enable hidden surface removal.
+WebGL *clip space* is a left-handed coordinate system. If you enable hidden surface removal using the view you see is essentially from the location $$(0,0,-1)$$ looking down the $$Z^+$$ axis. For this MP, since you are working in 2D, you do not necessarily need to enable hidden surface removal.
 
 ### Rendering
 
@@ -79,18 +79,19 @@ For this MP, you can render using the `gl.drawArrays` call, with the primitives 
 
 You will need to write code to change the location of vertices over time to animate your model. Your code should use two different methods for changing the vertices:
 
-1. Use 2 or more affine transformations (such as scaling, rotation, or translation). Use the [glMatrix]() library to implement these as matrix transformations. These transformations should be applied to the vertices in the vertex shader using a `uniform` variable
+1. Use 2 or more affine transformations (such as scaling, rotation, or translation). Use the [glMatrix](https://glmatrix.net/) library to implement these as matrix transformations. These transformations should be applied to the vertices in the vertex shader using a `uniform` variable
 
 2. Implement another motion by directly changing the vertex positions in the vertex buffer. This means you create a new JavaScript array with vertex position. For example, you may have code the does something like this:
 
-
+![University of Illinois Logo](/img/ilogo.png)
     
+Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
 
- Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
-
-   The motion for this animation should be something non-uniform that cannot easily be implemented as an affine transformation. For example, make the logo dance like a vertical sine curve. This part of the animation could be data driven using a table of pre-defined vertex positions for the motion. The motion can also be keyframed, so the vertices are linearly interpolated from one keyframe location to a second keyframe location.  When modifying the vertex positions by changing the coordinates in the buffer, make sure you use `gl.DYNAMIC_DRAW` when invoking `gl.bufferData`.
+ The motion for this animation should be something non-uniform that cannot easily be implemented as an affine transformation. For example, make the logo dance like a vertical sine curve. This part of the animation could be data driven using a table of pre-defined vertex positions for the motion. The motion can also be keyframed, so the vertices are linearly interpolated from one keyframe location to a second keyframe location.  When modifying the vertex positions by changing the coordinates in the buffer, make sure you use `gl.DYNAMIC_DRAW` when invoking `gl.bufferData`.
 
 ## Example Animation
+
+Here is an example of an animation that uses only an affine trnasformation applied using a `uniform` matrix sent to the vertex shader:
 
 <iframe src="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" style="border:0px #000000 none;" height="600px" width="600px"></iframe>
 
