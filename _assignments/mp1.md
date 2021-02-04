@@ -47,7 +47,7 @@ The webpage for your application should include a radio button that allows viewe
 
 ## Coding Requirements
 
-Your application must use JavaScript with WebGL 2.0. Your shaders should use GLSL 3.00 ES. 
+Your application must use JavaScript with WebGL 2.0. Your shaders should use GLSL 3.00 ES. You code must have comments for each function explaining what that function does, using the [Google JS commenting style](https://google.github.io/styleguide/jsguide.html#formatting-comments).
 
 ## Block I Animation
 
@@ -66,17 +66,13 @@ You should use a *Vertex Array Object (VAO)* to contain the state information fo
 An example of how all this is done can be found in the HelloAnimation example from [the Feb. 4 lecture](https://illinois-cs418.github.io/schedule).
 
 #### Coordinate System
-![clip space](/img/clip.png){:width="500px"}
-
-The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $$(0,0,0)$$ in which all visible geometry has coordinates in the range $$[-1,1]$$. This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $$(X,Y,0)$$ so you are drawing in the $$Z=0$$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $$[-100,100]$$ and simply divide by $$100$$ when you type in the vertex coordinates...or your code could do the division.  
+The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $$(0,0,0)$$ in which all visible geometry has coordinates in the range $$[-1,1]$$.
+![clip space](/img/clip.png){:width="400px"}
+This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $$(X,Y,0)$$ so you are drawing in the $$Z=0$$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $$[-100,100]$$ and simply divide by $$100$$ when you type in the vertex coordinates...or your code could do the division.  
 
 WebGL *clip space* is a left-handed coordinate system. If you enable hidden surface removal using the view you see is essentially from the location $$(0,0,-1)$$ looking down the $$Z^+$$ axis. For this MP, since you are working in 2D, you do not necessarily need to enable hidden surface removal.
 
-To enable hidden surface removal in WebGL you call<br/> 
-`gl.enable(gl.DEPTH_TEST);`<br/>  
-at startup and then call <br/> 
-`gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);`<br/>  
-each time you wish to draw a new frame.<br/> 
+To enable hidden surface removal in WebGL you call<br/> `gl.enable(gl.DEPTH_TEST);`<br/> at startup and then call <br/> `gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);`<br/> each time you wish to draw a new frame.<br/> 
 
 ### Rendering
 
