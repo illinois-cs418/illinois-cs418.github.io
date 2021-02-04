@@ -36,7 +36,7 @@ rubric:
     description: Is your animation significantly different than the logo and visually interesting
 ---
 
-![University of Illinois Logo](/img/logo2.png)
+![University of Illinois Logo](/img/ilogo.png)
 
 For your first Machine Problem, you will create **two** animations: 
 
@@ -84,42 +84,17 @@ You will need to write code to change the location of vertices over time to anim
 2. Implement another motion by directly changing the vertex positions in the vertex buffer. This means you create a new JavaScript array with vertex position. For example, you may have code the does something like this:
 
 
-    gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
+    
 
-
-   // Start with vertex at the origin    
-   var triangleVertices = [0.0,0.0,0.0];
-
-   //Generate a triangle fan around origin
-     var radius=0.5
-     var z=0.0;
-
-     for (i=0;i<numVertices;i++){
-         angle = i *  2 * Math.PI / numVertices;
-         x=(radius * Math.cos(angle));
-         y=(radius * Math.sin(angle));
-         
-
-         //add the vertex coordinates to the array
-         triangleVertices.push(x+pointOffset[0]);
-         triangleVertices.push(y+pointOffset[1]);
-         triangleVertices.push(z);
-     }
-     triangleVertices.push(triangleVertices[3]);
-     triangleVertices.push(triangleVertices[4]);
-     triangleVertices.push(z); 
-       
-     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.DYNAMIC_DRAW);`
-
-   Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
+ Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
 
    The motion for this animation should be something non-uniform that cannot easily be implemented as an affine transformation. For example, make the logo dance like a vertical sine curve. This part of the animation could be data driven using a table of pre-defined vertex positions for the motion. The motion can also be keyframed, so the vertices are linearly interpolated from one keyframe location to a second keyframe location.  When modifying the vertex positions by changing the coordinates in the buffer, make sure you use `gl.DYNAMIC_DRAW` when invoking `gl.bufferData`.
 
 ## Example Animation
 
-<iframe src="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" style="border:0px #000000 none;" name="Game name" scrolling="no" frameborder="1" marginheight="px" marginwidth="320px" height="600px" width="600px"></iframe>
+<iframe src="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" style="border:0px #000000 none;" height="600px" width="600px"></iframe>
 
-  <a href="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" target="_blank">click here to open in a separate window</a>
+<a href="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" target="_blank">click here to open in a separate window</a>
 
 ## Your Own Animation
 Implement a second animation of your own design. It should still be simple, but it should be more than just a slightly different shape doing a similar dance. Some possibilities:
@@ -140,7 +115,7 @@ You should add a radio to your HTML as described in the [Mozilla HTML Docs here]
 
 An example of how to do this would be:
 
-<script>
+<code>
     <p>Select an animation:</p>
     <div>
     <input type="radio" id="I" name="animation" value="I" checked>
@@ -150,15 +125,15 @@ An example of how to do this would be:
     <input type="radio" id="MyAnimation" name="animation" value="MyAnimation">
     <label for="MyAnimation"> Your Animation Name Here</label>
     </div>
-</script>
+</code>
 
 To query to see if a button is checked in JavaScript you would do the following:
 
-<script>
+<code>
     if (document.getElementById("I").checked == true)
         {
             //bind the VAO for the I logo
         }
-</script>
+</code>
 
 Based on which button is checked, you will choose which VAO to bind before calling `gl.drawArrays`. if you use a different shader program for your second animation, you will need to specify which program to use by invoking `gl.useProgram`. **Be aware that using multiple shader programs requires attention to detail.** The attribute variables may have different names and indices so you need to make sure you use the correct ones when setting up the VAOs. The uniform variables may also have different names and indices and you will need to use the correct ones when calling `gl.uniformMatrix4fv` to send a matrix to the shader program, for example. You are not required to use two different shader programs for this MP.
