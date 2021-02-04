@@ -59,7 +59,7 @@ You will need to model the logo with a 2-D mesh of triangles. One approach to cr
 
 Specifically, in the starter code you will want to modify `setupBuffers` and create a buffer to hold the vertex positions. Those coordinates should be sent down to the vertex shader to feed attributes of the type `in vec3`. 
 
-For the color, we would like you to use a color attribute rather than simply setting the color to orange in the fragment shader. You should create a color buffer with one color per vertex. These colors will be of the form $$(R,G,B,1)$$ where the RGB color channels are in the range $$[0,1]$$. The 4th element of a color is the *alpha* channel which indicates transparency. Since our logo is completely opaque we set $$\alpha=1$$ for each color. The colors should feed attributes of the type `in vec4` in the vertex shader.
+For the color, we would like you to use a color attribute rather than simply setting the color to orange in the fragment shader. You should create a color buffer with one color per vertex. These colors will be of the form $$(R,G,B,1)$$ where the RGB color channels are in the range $$[0,1]$$. The 4th element of a color is the *alpha* channel which indicates transparency. Since our logo is completely opaque we set *alpha*=1 for each color. The colors should feed attributes of the type `in vec4` in the vertex shader.
 
 You should use a *Vertex Array Object (VAO)* to contain the state information for these attributes. The state of both attributes being active should be contained in a single VAO. You activate a VAO by calling `gl.bindVertexArray` before calling `gl.drawArrays`
 
