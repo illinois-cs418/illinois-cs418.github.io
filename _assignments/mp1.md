@@ -49,6 +49,19 @@ The webpage for your application should include a radio button that allows viewe
 
 Your application must use JavaScript with WebGL 2.0. Your shaders should use GLSL 3.00 ES. You code must have comments for each function explaining what that function does, using the [Google JS commenting style](https://google.github.io/styleguide/jsguide.html#formatting-comments).
 
+You may use the code for the example animation shown below as starter code for this MP:
++ [HelloAnimation.html](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/HelloAnimation/HelloAnimation.html)
++ [HelloAnimation.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/HelloAnimation/HelloAnimation.js)
++ [gl-matrix-min.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/HelloAnimation/gl-matrix-min.js)
+
+## Example Animation
+
+Here is an example of an animation that uses only an affine trnasformation applied using a `uniform` matrix sent to the vertex shader:
+
+<iframe src="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" style="border:0px #000000 none;" height="600px" width="600px"></iframe>
+
+<a href="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" target="_blank">click here to open in a separate window</a>
+
 ## Block I Animation
 
 Your first animation will be a 2D "dancing" University of Illinois logo. The logo should look essentially like image shown above. You do not have to match the orange perfectly. You do not need to make the I curve as in the logo…just create a straight-line block I model.
@@ -68,6 +81,7 @@ An example of how all this is done can be found in the HelloAnimation example fr
 #### Coordinate System
 The WebGL clip coordinate system is the coordinate system vertex positions are assumed to be in when they leave the vertex shader. The view volume is a box centered at $$(0,0,0)$$ in which all visible geometry has coordinates in the range $$[-1,1]$$.
 ![clip space](/img/clip.png){:width="400px"}
+
 This means that any vertices outside that range will be *clipped* out and not rendered. So, when you design you logo, it should fit in that space. Since you are working in 2D, all of your vertex positions should be specified as $$(X,Y,0)$$ so you are drawing in the $$Z=0$$ plane. If it is easier to work in another coordinate space, you can do so as long as you transform the coordinates appropriately. For example you could work in $$[-100,100]$$ and simply divide by $$100$$ when you type in the vertex coordinates...or your code could do the division.  
 
 WebGL *clip space* is a left-handed coordinate system. If you enable hidden surface removal using the view you see is essentially from the location $$(0,0,-1)$$ looking down the $$Z^+$$ axis. For this MP, since you are working in 2D, you do not necessarily need to enable hidden surface removal.
@@ -117,14 +131,6 @@ var triangleVertices = [0.0,0.0,0.0];
 Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
 
  The motion for this animation should be something non-uniform that cannot easily be implemented as an affine transformation. For example, make the logo dance like a vertical sine curve. This part of the animation could be data driven using a table of pre-defined vertex positions for the motion. The motion can also be keyframed, so the vertices are linearly interpolated from one keyframe location to a second keyframe location.  When modifying the vertex positions by changing the coordinates in the buffer, make sure you use `gl.DYNAMIC_DRAW` when invoking `gl.bufferData`.
-
-## Example Animation
-
-Here is an example of an animation that uses only an affine trnasformation applied using a `uniform` matrix sent to the vertex shader:
-
-<iframe src="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" style="border:0px #000000 none;" height="600px" width="600px"></iframe>
-
-<a href="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" target="_blank">click here to open in a separate window</a>
 
 ## Your Own Animation
 Implement a second animation of your own design. It should still be simple, but it should be more than just a slightly different shape doing a similar dance. Some possibilities:
