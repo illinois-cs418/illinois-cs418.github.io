@@ -54,9 +54,11 @@ You may use the code for the example animation shown below as starter code for t
 + [HelloAnimation.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/HelloAnimation/HelloAnimation.js)
 + [gl-matrix-min.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/HelloAnimation/gl-matrix-min.js)
 
+You should change the author tag at the top of the HelloAnimation.js file to your name. When you download the files, keep them all in the same folder. 
+
 ## Example Animation
 
-Here is an example of an animation that uses only an affine trnasformation applied using a `uniform` matrix sent to the vertex shader:
+Here is an example of an animation that uses only an affine transformation applied using a `uniform` matrix sent to the vertex shader:
 
 <iframe src="https://illinois-cs418.github.io/Examples/WebGL2/HelloAnimation/HelloAnimation.html" style="border:0px #000000 none;" height="600px" width="600px"></iframe>
 
