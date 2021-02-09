@@ -24,6 +24,11 @@
   materials: " MP 1 Walkthrough [Video](https://classtranscribe.illinois.edu/video?id=273a6b0b-67fe-4493-a2d6-618ca14f6e36&from=sharedlink) <br/>
           Animation in WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-5-1-Animation.pdf)"
   title: "Basic Animation"
+-
+  date: "Week 3 (Feb 8)"
+  materials: "Data Structures for Meshes[Video](https://classtranscribe.illinois.edu/video?id=7fc8e9ad-0891-4f09-811a-d55cdd713b14&from=sharedlink)&nbsp[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-3-3-MeshStructures.pdf) <br/>
+              Indexed Meshes in WebGL [Video](https://classtranscribe.illinois.edu/video?id=67567527-f5d3-4222-8375-0fa5f2545c2e&from=sharedlink)&nbsp[PDF]()"
+  title: "Polygonal Meshes"
 
 
 
