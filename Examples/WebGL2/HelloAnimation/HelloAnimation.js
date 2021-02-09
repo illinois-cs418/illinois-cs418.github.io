@@ -16,6 +16,7 @@ var shaderProgram;
 
 /** @global The WebGL buffer holding the triangle */
 var vertexPositionBuffer;
+
 /** @global The WebGL buffer holding the vertex colors */
 var vertexColorBuffer;
 
@@ -251,3 +252,4 @@ function draw() {
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   requestAnimationFrame(animate); 
 }
+
