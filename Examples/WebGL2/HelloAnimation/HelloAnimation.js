@@ -117,11 +117,6 @@ function setupShaders() {
   // We only use one shader program for this example, so we can just bind
   // it as the current program here.
   gl.useProgram(shaderProgram);
-
-  // Create the vertex array object, which holds the list of attributes for
-  // the triangle.
-  vertexArrayObject = gl.createVertexArray();
-  gl.bindVertexArray(vertexArrayObject);
     
   // Query the index of each attribute in the list of attributes maintained
   // by the GPU. 
@@ -129,12 +124,10 @@ function setupShaders() {
     gl.getAttribLocation(shaderProgram, "aVertexPosition");
   shaderProgram.vertexColorAttribute =
     gl.getAttribLocation(shaderProgram, "aVertexColor");
+    
+  //Get the index of the Uniform variable as well
   shaderProgram.modelViewMatrixUniform =
     gl.getUniformLocation(shaderProgram, "uModelViewMatrix");
-
-  // Enable each attribute we are using in the VAO.  
-  gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
-  gl.enableVertexAttribArray(shaderProgram.vertexColorAttribute);
 }
 
 
@@ -142,6 +135,12 @@ function setupShaders() {
  * Set up the buffers to hold the triangle's vertex positions and colors.
  */
 function setupBuffers() {
+    
+  // Create the vertex array object, which holds the list of attributes for
+  // the triangle.
+  vertexArrayObject = gl.createVertexArray();
+  gl.bindVertexArray(vertexArrayObject); 
+
   // Create a buffer for positions, and bind it to the vertex array object.
   vertexPositionBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
@@ -174,6 +173,13 @@ function setupBuffers() {
   vertexColorBuffer.numItems = 3;  
   gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, 
                          vertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
+    
+   // Enable each attribute we are using in the VAO.  
+  gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+  gl.enableVertexAttribArray(shaderProgram.vertexColorAttribute);
+    
+  // Unbind the vertex array object to be safe.
+  gl.bindVertexArray(null);
 }
 
 
@@ -222,6 +228,7 @@ function draw() {
   if (rotAngle > 360.0)
       rotAngle = 0.0;
   glMatrix.mat4.fromZRotation(modelViewMatrix, degToRad(rotAngle));
+  setupBuffers();     
 
   // Draw the frame.
   draw();
@@ -236,7 +243,7 @@ function draw() {
  * Startup function called from html code to start the program.
  */
  function startup() {
-  console.log("No bugs so far...");
+  console.log("Starting animation...");
   canvas = document.getElementById("myGLCanvas");
   gl = createGLContext(canvas);
   setupShaders(); 
