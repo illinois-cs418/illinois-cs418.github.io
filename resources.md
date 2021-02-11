@@ -21,6 +21,10 @@ permalink: /resources
 + Use the most recent version of the library [glMatrix Library Download](https://glmatrix.net/)
 + API Reference: [glMatrix Library Docs](https://glmatrix.net/docs/)
 
+### WebGL Debugging ###
++ Browser extension for debugging [spector.js](https://spector.babylonjs.com/)
++ Programmtically debugging WebGL: [webgl-debug.js documentation](https://www.khronos.org/webgl/wiki/Debugging)
+
 ## Reading ##
 
 For the algorithmic and theoretical components of the course, the posted lecture notes should be sufficient. <br/>
