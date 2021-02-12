@@ -25,13 +25,18 @@
           Animation in WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-5-1-Animation.pdf)"
   title: "Basic Animation"
 -
-  date: "Week 3 (Feb 8)"
+  date: "Week 3 (Feb 9)"
   materials: "Data Structures for Meshes[Video](https://classtranscribe.illinois.edu/video?id=7fc8e9ad-0891-4f09-811a-d55cdd713b14&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-3-3-MeshStructures.pdf) <br/>
               Indexed Meshes in WebGL [Video](https://classtranscribe.illinois.edu/video?id=67567527-f5d3-4222-8375-0fa5f2545c2e&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-13-IndexedMeshes.pdf)"
   title: "Data Structures for Polygonal Meshes"
 -
   date: "Week 3 (Feb 11)"
-  materials: "Ortho Transformation [Video]()&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/CS418-Lecture9-OrthoProjection.pdf)"
+  materials: "Ortho Transformation [Video](https://classtranscribe.illinois.edu/video?id=2f06792a-86b3-4298-9041-9cd84f3b1bd8&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/CS418-Lecture9-OrthoProjection.pdf)"
   title: "Orthographic Projection"
+-
+  date: "Week 3 (Feb 16)"
+  materials: "View Transformation[Video]()&nbsp;[PDF]() <br/>
+              Perspective Projection [Video]()&nbsp;[PDF]()"
+  title: "A Perpsective Camera Model"  
 
 
