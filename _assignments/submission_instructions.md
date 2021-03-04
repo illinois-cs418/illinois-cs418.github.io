@@ -1,10 +1,16 @@
-You will need to submit the following files in a *zip* archive via Compass:
+**Submit all the files needed to run your app including gl-matrix-min.js or similar library files**
+
+Submit the files in **zipped** folder to Compass.
+
+Use the following naming conventions for your files:
 
 + mpN.html
 
 + mpN.js
 
-+ You can use any naming convention you wish for additional JS you author and use (e.g. Terrain.js or Sphere.js, etc.)
++ You can use any naming convention you wish for additional JS you use (e.g. Terrain.js or Sphere.js, etc.)
+
+**Test your app right before you submit and after renaming any files...not updating a JS file file sourced in mpH.html is a common bug**
 
 In the file name, replace N with the number of the MP (e.g. MP1.html). You should also include any additional files you use or have written. In particular you can use the
 glMatrix library gl-matrix-min.js.
