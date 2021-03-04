@@ -145,7 +145,7 @@ Iterate over the vertices and do the following:
     ![](https://illinois-cs418.github.io//img/dottest.jpg)
 2.  If $$b$$ is in the negative half-space, **lower** the $$z$$ coordinate of by some amount $$\Delta$$.
 3.  If $$b$$ is in the positive half-space, **raise** the $$z$$ coordinate of by some amount $$\Delta$$.<br/><br/>
-**Optional** You may get better results with disatnce weighted diplacements for $$\Delta$$. To do so compute the distance $$r=\mathbf{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine.<br/> 
+**Optional** You may get better results with disatnce weighted diplacements for $$\Delta$$. To do so compute the distance $$r=\mathbf{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine.<br/> <br/>
 4.  Make multiple passes over the vertices generating faults and altering vertex heights until you have a good result.<br/>
 **Important** Let $$\Delta_i$$ be the faulting parameter in pass $$i$$ over the vertices. Next pass use $$\Delta_{i+1} = \frac{\Delta_i}{2^H}$$ where $$H\in[0,1]$$ 
 
