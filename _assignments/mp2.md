@@ -80,7 +80,7 @@ You can use the following starter code:
 + MP2.html [Link](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/MP2.html)
 + MP2.js [Link](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/MP2.js)
 + Terrain.js [Link](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/Terrain.js)
-+ glmatrix-min.js [Link](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/gl-matrix-min.js)
++ gl-matrix-min.js [Link](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/gl-matrix-min.js)
 
 Your tasks are the following:
 
@@ -105,7 +105,7 @@ We will generate a mesh using an indexed face representation. This means we will
 
 The function also will generate the triangles for the mesh by filling `faceData`. Each face will represented by a triple $$v_i,v_j,v_k$$ of integers which are the indices of the vertices at the triangle corners. For example$$0,1,10$$ would mean the triangle is formed by vertex 0, 1, and 10 in `positionData`. SInce `positionData` is actually a 1D array of floats, with each vertex requiring 3 floats, the start of the coordinates for the vertices will be at index 0, index 3, and index 30 in `positionData`.
 
-To generate the `faceData` imagine the vertices as a 2d grid of points. Each rectangle of the grid can be formed by two triangles. The indices of the vertices at the corner of a triangle are determined by their order of insertion in the above code.  For example, the triangles in the lower left corner of the grid will be $$0,1,T+1$$ and $$1,T+2,T+1$$ where $$T$$ is the number of triangles along the $$x$$-axis. **Note** these triangles must have their vertices specified in counter-clockwise (CCW) order for normal vectors to be generated in the correct direction.
+To generate the `faceData` imagine the vertices as a 2d grid of points. Each rectangle of the grid can be formed by two triangles. The indices of the vertices at the corner of a triangle are determined by their order of insertion in the above code.  For example, the triangles in the lower left corner of the grid will be $$0,1,T+1$$ and $$1,T+2,T+1$$ where $$T$$ is the number of triangles along the $$x$$-axis. **Note these triangles must have their vertices specified in counter-clockwise (CCW) order for normal vectors to be generated in the correct direction.**
 
 ### Implement the methods `getVertex(v,i)` and `setVertex(v,i)` in Terrain.js
 
@@ -144,10 +144,10 @@ Iterate over the vertices and do the following:
 1.  Given a vertex $$b$$, test which side of the plane that vertex falls on by using the dot product test $$ (b-p) \cdot n \ge  0 $$.
     ![](https://illinois-cs418.github.io//img/dottest.jpg)
 2.  If $$b$$ is in the negative half-space, **lower** the $$z$$ coordinate of by some amount $$\Delta$$.
-3.  If $$b$$ is in the positive half-space, **raise** the $$z$$ coordinate of by some amount $$\Delta$$.
-    1. **Optional** You may compute the distance $$r=\bold{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine. 
-4.  Repeat this process making multiple passes over the vertices generating faults and altering vertex heights until you have a decent looking terrain.
-    1. **Important** Let $$\Delta_i$$ be the faulting parameter you used in pass $$i$$ over the vertices. For the next pass you should use $$\Delta_{i+1} = \frac{\Delta_i}{2^H}$$ where $$H\in[0,1]$$ 
+3.  If $$b$$ is in the positive half-space, **raise** the $$z$$ coordinate of by some amount $$\Delta$$.<br/>
+**Optional** You may compute the distance $$r=\mathbf{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine. 
+4.  Make multiple passes over the vertices generating faults and altering vertex heights until you have a good result.<br/>
+**Important** Let $$\Delta_i$$ be the faulting parameter used in pass $$i$$ over the vertices. Next pass you should use $$\Delta_{i+1} = \frac{\Delta_i}{2^H}$$ where $$H\in[0,1]$$ 
 
 #### Parameters
 
@@ -155,7 +155,7 @@ You will need to experiment with the parameters of algorithm to find ones that g
 
 ###  Use <code>gl.drawElements</code> in Terrain.js
 
-Your implementation should generate an indexed mesh and render it using the WebGL function <code>void gl.drawElements(mode, count, type,offset)</code>The starter code does this, but  **you should pay attention to the `type` parameter as the type **`gl.UNSIGNED_SHORT` will limit your mesh to having only 65536 vertices. If you want more, you will need to use the <code>gl.UNSIGNED_INT</code>.
+Your implementation should generate an indexed mesh and render it using the WebGL function <code>void gl.drawElements(mode, count, type,offset)</code>The starter code does this, but  **you should pay attention to the `type` parameter as the type `gl.UNSIGNED_SHORT` will limit your mesh to having only 65536 vertices. If you want more, you will need to use the <code>gl.UNSIGNED_INT</code>.
 
 ### Complete <code>calculateNormals()</code> in Terrain.js
 
