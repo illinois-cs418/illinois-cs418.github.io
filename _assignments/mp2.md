@@ -58,7 +58,7 @@ For this MP we will write code to generate a basic 3D terrain. We won't be using
 
 You can find a summary of the faulting method in section 3.1.2 of the following survey paper on terrain generation algorithms:
 
-_A Review of Digital Terrain Modeling_. Eric Galin, Eric Guérin, Adrien Peytavie, et al.. [PDF](https://hal.archives-ouvertes.fr/hal-02097510/file/A%20Review%20of%20Digital%20Terrain%20Modeling.pdf)
+_A Review of Digital Terrain Modeling_. Eric Galin, Eric Guérin, Adrien Peytavie, et al.[[PDF]](https://hal.archives-ouvertes.fr/hal-02097510/file/A%20Review%20of%20Digital%20Terrain%20Modeling.pdf)
 
 ## Faulting Method Overview
 
@@ -144,10 +144,10 @@ Iterate over the vertices and do the following:
 1.  Given a vertex $$b$$, test which side of the plane that vertex falls on by using the dot product test $$ (b-p) \cdot n \ge  0 $$.
     ![](https://illinois-cs418.github.io//img/dottest.jpg)
 2.  If $$b$$ is in the negative half-space, **lower** the $$z$$ coordinate of by some amount $$\Delta$$.
-3.  If $$b$$ is in the positive half-space, **raise** the $$z$$ coordinate of by some amount $$\Delta$$.<br/>
-**Optional** You may compute the distance $$r=\mathbf{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine. 
+3.  If $$b$$ is in the positive half-space, **raise** the $$z$$ coordinate of by some amount $$\Delta$$.<br/><br/>
+**Optional** You may get better results with disatnce weighted diplacements for $$\Delta$$. To do so compute the distance $$r=\mathbf{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine.<br/> 
 4.  Make multiple passes over the vertices generating faults and altering vertex heights until you have a good result.<br/>
-**Important** Let $$\Delta_i$$ be the faulting parameter used in pass $$i$$ over the vertices. Next pass you should use $$\Delta_{i+1} = \frac{\Delta_i}{2^H}$$ where $$H\in[0,1]$$ 
+**Important** Let $$\Delta_i$$ be the faulting parameter in pass $$i$$ over the vertices. Next pass use $$\Delta_{i+1} = \frac{\Delta_i}{2^H}$$ where $$H\in[0,1]$$ 
 
 #### Parameters
 
