@@ -10,7 +10,8 @@ Use the following naming conventions for your files:
 
 + You can use any naming convention you wish for additional JS you use (e.g. Terrain.js or Sphere.js, etc.)
 
-**Test your app right before you submit and after renaming any files...not updating a JS file file sourced in mpH.html is a common bug**
+**Test your app right before you submit and after renaming any files.**<br/>
+Not updating the name of a JS file file sourced in mpH.html is a common bug
 
 In the file name, replace N with the number of the MP (e.g. MP1.html). You should also include any additional files you use or have written. In particular you can use the
 glMatrix library gl-matrix-min.js.
