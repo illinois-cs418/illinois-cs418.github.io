@@ -43,7 +43,7 @@ For your second Machine Problem, you will procedurally model a piece of terrain.
 + The scene will be static...meaning you will not interactively change your view of it/
 + **We will add interaction in a following MP, so write good code that you can reuse.** 
 
-### 1. Terrain Generation ###
+# Terrain Generation 
 
 Many basic terrain modeling algorithms employ something called *Perlin noise* to create a highly detailed natural appearance. Invented by Ken Perlin in 1982 while working on the movie *Tron*, Perlin noise uses randomness and repetition to synthesize 2D and 3D textures. In 1997, Perlin won an Academy Award for Technical Achievement from the Academy of Motion Picture Arts and Sciences for this contribution to graphics. Perlin noise and techniques based off of it are still widely used in games and movies today.
 
@@ -52,7 +52,7 @@ Realistic terrain generation in modern games require tools that do more than jus
 
 
 
-### The Faulting Method
+# The Faulting Method
 
 For this MP we will write code to generate a basic 3D terrain. We won't be using Perlin's function...instead we will do something conceptually similar but less efficient...but easier to implement. This method is called _the faulting method_ and was initially proposed by  Benoit Mandelbrot in 1982.
 
@@ -60,7 +60,7 @@ You can find a summary of the faulting method in section 3.1.2 of the following 
 
 _A Review of Digital Terrain Modeling_. Eric Galin, Eric Guérin, Adrien Peytavie, et al.. [PDF](https://hal.archives-ouvertes.fr/hal-02097510/file/A%20Review%20of%20Digital%20Terrain%20Modeling.pdf)
 
-#### Faulting Method Overview
+## Faulting Method Overview
 
 The first step in our implementation will be to create a flat, triangulated surface in which all the vertices have $$z$$ coordinates of $$0$$.
 ![](https://illinois-cs418.github.io//img/rpart0-2.png)
@@ -73,7 +73,7 @@ After that we will repeatedly, randomly generate an imaginary fault plane cuttin
 Here it is without the triangle boundaries, shaded using the Phong reflectance model.
 ![](https://illinois-cs418.github.io//img/rpart2-2.png)
 
-### Implementation 
+## Implementation 
 
 You can use the following starter code:
 
@@ -84,7 +84,7 @@ You can use the following starter code:
 
 Your tasks are the following:
 
-#### Implement the method `generateTriangles()` in Terrain.js
+### Implement the method `generateTriangles()` in Terrain.js
 
 We will generate a mesh using an indexed face representation. This means we will have one block of data that specifies the positions of the vertices and another block of data that specifies the connectivity of the triangles. This function fills in an array called `positionData` which contains the $$x,y,z$$ coordinates of each vertex. Theses positions can be generated in the following manner:
 
@@ -107,7 +107,7 @@ The function also will generate the triangles for the mesh by filling `faceData`
 
 To generate the `faceData` imagine the vertices as a 2d grid of points. Each rectangle of the grid can be formed by two triangles. The indices of the vertices at the corner of a triangle are determined by their order of insertion in the above code.  For example, the triangles in the lower left corner of the grid will be $$0,1,T+1$$ and $$1,T+2,T1$$ where $$T$$ is the number of triangles along the $$x$$-axis. **Note** these triangles must have their vertices specified in counter-clockwise (CCW) order for normal vectors to be generated in the correct direction.
 
-#### Implement the methods `getVertex(v,i)` and `setVertex(v,i)` in Terrain.js
+### Implement the methods `getVertex(v,i)` and `setVertex(v,i)` in Terrain.js
 
 These methods are accessor and mutator methods to help make working with the `positonData` syntactically simpler. It allows you to use a single function call to work with the $$x,y,z$$ coordinates of a vertex by abstracting the implementation of `positionData` as a flat array of floats. Here is an exampled implementation of `getVertex`
 
@@ -124,13 +124,11 @@ These methods are accessor and mutator methods to help make working with the `po
     }
 ~~~
 
-
-
-#### Implement the method <code>shapeTerrain</code> in Terrain.js
+### Implement the method <code>shapeTerrain</code> in Terrain.js
 
 The rectangle for your surface mesh should have corners $$(x_{min},y_{min},0)$$ and $$(x_{max},y_{max},0)$$. To implement the faulting method you need to:
 
-##### Construct a Random Fault Plane
+#### Construct a Random Fault Plane
 
 We will construct a fault plane cutting through the terrain by generating a random point $$p$$ and random direction vector $$\vec{n}$$ to define the plane.
 
@@ -139,7 +137,7 @@ We will construct a fault plane cutting through the terrain by generating a rand
    You can easily generate a random vector using <code>glMatrix.vec2.random(out)</code> 
    Alternatively, if $$\theta$$ is a random angle in $$[0,2\pi]$$ then an appropriate random normal would be $$\vec{n}=(\cos{\theta},\sin{\theta},0)$$.
 
-##### Raise and Lower Vertices
+#### Raise and Lower Vertices
 
 Iterate over the vertices and do the following:
 
@@ -151,25 +149,25 @@ Iterate over the vertices and do the following:
 4.  Repeat this process making multiple passes over the vertices generating faults and altering vertex heights until you have a decent looking terrain.
     1. **Important** Let $$\Delta_i$$ be the faulting parameter you used in pass $$i$$ over the vertices. For the next pass you should use $$\Delta_{i+1} = \frac{\Delta_i}{2^H}$$ where $$H\in[0,1]$$ 
 
-##### Parameters
+#### Parameters
 
 You will need to experiment with the parameters of algorithm to find ones that give good results. The images above used 100 iterations of partitioning on a $$64 \times 64$$ grid of vertices spanning a unit square with $$\Delta = 0.005$$ and $$H=$$0. You should use a larger value for $$H$$.
 
-####  Use <code>gl.drawElements</code> in Terrain.js
+###  Use <code>gl.drawElements</code> in Terrain.js
 
 Your implementation should generate an indexed mesh and render it using the WebGL function <code>void gl.drawElements(mode, count, type,offset)</code>The starter code does this, but  **you should pay attention to the `type` parameter as the type **`gl.UNSIGNED_SHORT` will limit your mesh to having only 65536 vertices. If you want more, you will need to use the <code>gl.UNSIGNED_INT</code>.
 
-#### Complete <code>calculateNormals()</code> in Terrain.js
+### Complete <code>calculateNormals()</code> in Terrain.js
 
 In order for the mesh to be shaded correctly **you will also need to generate per-vertex normals** for the mesh. Each normal is a vector perpendicular to the mesh at the vertex, and should be  computed as a _**triangle area-weighted average**_ of the normals of the triangles that surround the vertex. These normals will be another attribute that you will need to send down to the vertex shader. 
 
 Generating per-vertex normals is discussed in Week 5 (Feb 23) Lecture available at this [Link](https://illinois-cs418.github.io/schedule).
 
-#### Implement a perspective view in MP2.js
+### Implement a perspective view in MP2.js
 
 Your code should generate a view matrix and a perspective projection matrix in the JS portion of the app and send them to the vertex shader...and use them to transform the vertices. You should use the [glMatrix library](http://glmatrix.net/) functions `lookAt(out, eye, center, up)` and `perspective(out, fovy, aspect, near, far)` to generate the matrices. It is up to you to understand how to specify the parameters to generate a good view. 
 
-#### Implement the Phong reflection model and Phong shading
+### Implement the Phong reflection model and Phong shading
 
 Implement the Phong illumination model with Phong shading. This means your shading calculations should be done per-fragment..meaning in the fragment shader. You can position your light source(s) anywhere in the scene as long as the rendered images are well-lit.  
 
@@ -182,7 +180,7 @@ The starter code implements the Phong reflection model with _Gouraud_ shading. I
 
 For this MP you will generate material colors in the vertex shader...you will need to generate a color for the terrain based on elevation as described below. You can set the shininess coefficient $$\alpha$$ however you wish (e.g.  $$\alpha=1$$ for all shading computations is acceptable ).
 
-#### Implement an elevation-based colormap for the terrain
+### Implement an elevation-based colormap for the terrain
 
 In your shading calculation, you should assign material colors (the $$k$$ values in the Phong model) to vertices based on the elevation of the vertex. If you use the $$z$$-coordinate as elevation, that means you should base your color assignment on the value of the $$z$$-coordinate. For example, you could define four different intervals of z values and assign blue to the vertices in the lowest interval, green to the second lowest, brown to the second highest, and white to the highest. **You should define your own color scheme...you can be creative and do not need to mimic the picture shown here.**
 
@@ -210,7 +208,7 @@ To make the calculation simpler, we should implementing the following:
            }
    ~~~~~~~~
 
-4. Then, you can set the values of ` kAmbient` and `kDiffuse` using a colormap based on `nrmZ` knowing that `nrmZ`$$\in [0,1]$$
+4. Then, you can set the values of `kAmbient` and `kDiffuse` using a colormap based on `nrmZ` knowing that `nrmZ`$$\in [0,1]$$
 
 Note that `kAmbient` and `kDiffuse` must be local variables in the shader, they cannot be declared as `uniform` variables in the shader since you are assigning values to them in the shader code. 
 
