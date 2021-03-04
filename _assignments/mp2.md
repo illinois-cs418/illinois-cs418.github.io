@@ -58,7 +58,7 @@ For this MP we will write code to generate a basic 3D terrain. We won't be using
 
 You can find a summary of the faulting method in section 3.1.2 of the following survey paper on terrain generation algorithms:
 
-_A Review of Digital Terrain Modeling_. Eric Galin, Eric Guérin, Adrien Peytavie, et al.[[PDF]](https://hal.archives-ouvertes.fr/hal-02097510/file/A%20Review%20of%20Digital%20Terrain%20Modeling.pdf)
+_A Review of Digital Terrain Modeling_. Eric Galin, Eric Guérin, Adrien Peytavie, et al. [[PDF]](https://hal.archives-ouvertes.fr/hal-02097510/file/A%20Review%20of%20Digital%20Terrain%20Modeling.pdf)
 
 ## Faulting Method Overview
 
@@ -103,7 +103,7 @@ We will generate a mesh using an indexed face representation. This means we will
 
 
 
-The function also will generate the triangles for the mesh by filling `faceData`. Each face will represented by a triple $$v_i,v_j,v_k$$ of integers which are the indices of the vertices at the triangle corners. For example$$0,1,10$$ would mean the triangle is formed by vertex 0, 1, and 10 in `positionData`. SInce `positionData` is actually a 1D array of floats, with each vertex requiring 3 floats, the start of the coordinates for the vertices will be at index 0, index 3, and index 30 in `positionData`.
+The function also will generate the triangles for the mesh by filling `faceData`. Each face will represented by a triple $$v_i,v_j,v_k$$ of integers which are the indices of the vertices at the triangle corners. For example $$0,1,10$$ would mean the triangle is formed by vertex 0, 1, and 10 in `positionData`. SInce `positionData` is actually a 1D array of floats, with each vertex requiring 3 floats, the start of the coordinates for the vertices will be at index 0, index 3, and index 30 in `positionData`.
 
 To generate the `faceData` imagine the vertices as a 2d grid of points. Each rectangle of the grid can be formed by two triangles. The indices of the vertices at the corner of a triangle are determined by their order of insertion in the above code.  For example, the triangles in the lower left corner of the grid will be $$0,1,T+1$$ and $$1,T+2,T+1$$ where $$T$$ is the number of triangles along the $$x$$-axis. **Note these triangles must have their vertices specified in counter-clockwise (CCW) order for normal vectors to be generated in the correct direction.**
 
@@ -124,7 +124,7 @@ These methods are accessor and mutator methods to help make working with the `po
     }
 ~~~
 
-### Implement the method <code>shapeTerrain</code> in Terrain.js
+### Implement the method <code>shapeTerrain()</code> in Terrain.js
 
 The rectangle for your surface mesh should have corners $$(x_{min},y_{min},0)$$ and $$(x_{max},y_{max},0)$$. To implement the faulting method you need to:
 
@@ -145,7 +145,7 @@ Iterate over the vertices and do the following:
     ![](https://illinois-cs418.github.io//img/dottest.jpg)
 2.  If $$b$$ is in the negative half-space, **lower** the $$z$$ coordinate of by some amount $$\Delta$$.
 3.  If $$b$$ is in the positive half-space, **raise** the $$z$$ coordinate of by some amount $$\Delta$$.<br/><br/>
-**Optional** You may get better results with disatnce weighted diplacements for $$\Delta$$. To do so compute the distance $$r=\mathbf{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine.<br/> <br/>
+**Optional** You may get better results with disatnce weighted diplacements for $$\Delta$$. To do so compute the distance $$r=\mathbf{d}(b,\Phi_i)$$ from $$b$$ to the fault plane $$\Phi_i$$ and alter the $$\Delta$$ you use for each vertex by a coefficient function $$g(r)=(1-(r/R)^2)^2$$ for $$r<R$$ and $$g(r)=0$$ where $$R$$ is a parameter you determine.<br/> <br/>
 4.  Make multiple passes over the vertices generating faults and altering vertex heights until you have a good result.<br/>
 **Important** Let $$\Delta_i$$ be the faulting parameter in pass $$i$$ over the vertices. Next pass use $$\Delta_{i+1} = \frac{\Delta_i}{2^H}$$ where $$H\in[0,1]$$ 
 
@@ -155,7 +155,7 @@ You will need to experiment with the parameters of algorithm to find ones that g
 
 ###  Use <code>gl.drawElements</code> in Terrain.js
 
-Your implementation should generate an indexed mesh and render it using the WebGL function <code>void gl.drawElements(mode, count, type,offset)</code>The starter code does this, but  **you should pay attention to the `type` parameter as the type `gl.UNSIGNED_SHORT` will limit your mesh to having only 65536 vertices. If you want more, you will need to use the <code>gl.UNSIGNED_INT</code>.
+Your implementation should generate an indexed mesh and render it using the WebGL function <code>void gl.drawElements(mode, count, type,offset)</code> The starter code does this, but  you should pay attention to the `type` parameter as the type `gl.UNSIGNED_SHORT` will limit your mesh to having only 65536 vertices. If you want more, you will need to use the <code>gl.UNSIGNED_INT</code>.
 
 ### Complete <code>calculateNormals()</code> in Terrain.js
 
