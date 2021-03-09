@@ -55,6 +55,16 @@
 -
   date: "Week 6 (March 4)"
   materials: "MP 2 Assignment [Link](https://illinois-cs418.github.io/assignments/mp2.html)&nbsp;[Video](https://classtranscribe.illinois.edu/video?id=fc31d2bf-dd03-44ec-a004-094e1eafe50d&from=sharedlink)"
+  title: "MP2 Walkthrough"
+-
+  date: "Week 6 (March 4)"
+  materials: "MP 2 Assignment [Link](https://illinois-cs418.github.io/assignments/mp2.html)&nbsp;[Video](https://classtranscribe.illinois.edu/video?id=fc31d2bf-dd03-44ec-a004-094e1eafe50d&from=sharedlink)"
   title: "MP2 Walkthrough" 
+-
+  date: "Week 7 (March 9)"
+  materials: "Euler Angles [Video](https://classtranscribe.illinois.edu/video?id=acf73ea1-7a86-43ca-8b95-d4804765e07a&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-16-EulerAngles.pdf)<br/>
+             Quaternions [Video](https://classtranscribe.illinois.edu/video?id=9805473d-6c97-456b-af52-2679b8f3049f&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-16-Quaternions.pdf)"
+  title: "Math for Orientation" 
+
 
 
