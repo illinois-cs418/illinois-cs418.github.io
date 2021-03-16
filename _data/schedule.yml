@@ -68,12 +68,11 @@
   title: "Participating Media"
 -
   date: "Week 8 (March 18)"
-  materials: "Intensity [Video](https://classtranscribe.illinois.edu/video?id=3a538275-a259-44f1-8d17-c437ddf4ccc3&from=sharedlink)&nbsp;[PDF]()<br/>
-  XYZ Color Space [Video](https://classtranscribe.illinois.edu/video?id=8829d27d-eef9-49eb-9e45-264de75b984d&from=sharedlink)&nbsp;[PDF]()<br/>
-  HSV Color Space [Video](https://classtranscribe.illinois.edu/video?id=6d4fcf7b-7eb2-49f4-9a40-1f82ae4ae976&from=sharedlink)&nbsp;[PDF]()<br/>
-  Gamma [Video](https://classtranscribe.illinois.edu/video?id=94070051-f5f5-4aa1-b8b0-e9098cb2cc18&from=sharedlink)&nbsp;[PDF]()<br/>
-  sRGB Coloe Space [Video](https://classtranscribe.illinois.edu/video?id=964a593d-da81-4006-ba10-a0f8f48f7f13&from=sharedlink)&nbsp;[PDF]()<br/>
-  
+  materials: "Intensity [Video](https://classtranscribe.illinois.edu/video?id=3a538275-a259-44f1-8d17-c437ddf4ccc3&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-17-Intensity.pdf)<br/>
+  XYZ Color Space [Video](https://classtranscribe.illinois.edu/video?id=8829d27d-eef9-49eb-9e45-264de75b984d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-17-4-XYZ.pdf)<br/>
+  HSV Color Space [Video](https://classtranscribe.illinois.edu/video?id=6d4fcf7b-7eb2-49f4-9a40-1f82ae4ae976&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-17-3-HSV.pdf)<br/>
+  Gamma [Video](https://classtranscribe.illinois.edu/video?id=94070051-f5f5-4aa1-b8b0-e9098cb2cc18&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-18-gamma.pdf)<br/>
+  sRGB Coloe Space [Video](https://classtranscribe.illinois.edu/video?id=964a593d-da81-4006-ba10-a0f8f48f7f13&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-17-sRGB.pdf)<br/>
   "
   title: "Color"
  
