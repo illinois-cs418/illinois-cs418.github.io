@@ -176,7 +176,7 @@ Once you have a new `camOrientation` and `camPosition` you can generate a View m
 
 You should use `glMatrix.mat4.lookAt(out, eye, center, up)` .  Use `camPosition` for the `eye` parameter and generate correct values for `center` and `up` . To compute `up`, you should transform your initial **up** vector, usually $$(0,1,0)$$,by `camOrientation`. To compute `center`, the point in space at which you are looking, you should transform `camIntialDir` by `camOrientation` to generate the current view direction. You can than compute `center` as the sum of `camPosition` and the current view direction.
 
-### A working and documented user interface 
+### A Documented User Interface 
 
 You should implement a user interface that minimally implements the arrow-key and +/- key controls described above. 
 Your webpage should include text instructions describing how the user interface works. Simply include text in the HTML file that explains how to control the view and speed. 
