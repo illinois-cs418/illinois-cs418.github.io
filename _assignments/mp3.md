@@ -2,7 +2,7 @@
 layout: assignment
 title: "MP3: Simulating Flight"
 index: 10
-due: "March. 31, 2021 @ 11:59 PM"
+due: "April 2, 2021 @ 11:59 PM"
 material: ~
 points: 50
 rubric:
@@ -42,7 +42,7 @@ rubric:
 
 For the third machine problem, you will extend your terrain renderer with a simple flight simulator. Your "plane" will fly over the terrain you generate.  You will also add the capability of applying fog to your terrain.
 
-### Simulating Flight
+## Simulating Flight
 
 The app will be rendering a view of the terrain from the perspective of someone flying over it. The view should automatically move forward at a fixed speed. The user will control the roll and pitch of the airplane through the arrow keys. The controls should be:
 
@@ -51,11 +51,11 @@ The app will be rendering a view of the terrain from the perspective of someone 
 + Pressing the + (-) key will increase (decrease) the airplane's speed
 + Pressing the ESC key will reset the current view to the initial viewpoint and direction 
 
-#### Implementation
+### Implementation
 
 You are required to use quaternions and to have the control behaviors match those described above. Our suggested implementation would be to do the following.
 
-##### Representing Camera Orientation with a Quaternion
+#### Representing Camera Orientation with a Quaternion
 
 Use the [glMatrix library](http://glmatrix.net) provides support for using [quaternions](http://glmatrix.net/docs/module-quat.html). We would suggest using that library instead of creating your own quaternion class. 
 
@@ -70,11 +70,11 @@ var camInitialDir = glMatrix.vec3.create();         //the camera's initial view 
 
 **Important: You will need to find appropriate initial values for these variables. For example, you should not assume that `camSpeed = 0.5;` is appropriate for your app and terrain scale. Similarly, you will need to experimentally find good values for the amounts by which things like `camSpeed` are adjusted when a user presses a key.**
 
-##### User Interaction
+#### User Interaction
 
 Create a function `function animate(timeStamp)` that updates the camera every frame based on the user's keyboard inputs.  This function should be the provided callback before each redraw event...meaning you should call `requestAnimationFrame(animate)` at the end  of the`startup` function if you are using the starter code from MP2. You will also call `requestAnimationFrame(animate)` from inside `animate(timeStamp)`. 
 
-##### Event Handling
+#### Event Handling
 
 You should write event handling functions for `keyDown` and `keyUp` events that you wish to capture. You can find the details of how to do this in the following:
 
@@ -124,7 +124,7 @@ In `animate(timeStamp)` you will need to do the following:
 3. Update `camOrientation` 
 4. Update `camPosition` 
 
-##### Handling Orientation Changes
+#### Handling Orientation Changes
 
 ![Roll and Pitch](https://illinois-cs418.github.io/img/rpy.PNG){:width="300px"}
 
@@ -160,7 +160,7 @@ if (keys["d"]) {
 
    You should use `glMatrix.quat.multiply(out,a,b);` and make sure you set `a` and `b` to the correct variables to generate the corect order of multiplication.
 
-##### Handling Position Changes
+#### Handling Position Changes
 
 You will update `camPosition` by calculating a displacement vector `deltaPosition` in the forward direction of the view and adding it to `camPosition`.
 
@@ -170,22 +170,22 @@ You will update `camPosition` by calculating a displacement vector `deltaPositio
 3. Set `deltaPosition` to the `forwardDirection` scaled to a length of `camSpeed`
 4.  Update `camPosition` using `glMatrix.vec3.add(camPosition,camPosition,deltaPosition)`
 
-##### Generating an Updated View
+#### Generating an Updated View
 
 Once you have a new `camOrientation` and `camPosition` you can generate a View matric for the current frame.
 
 You should use `glMatrix.mat4.lookAt(out, eye, center, up)` .  Use `camPosition` for the `eye` parameter and generate correct values for `center` and `up` . To compute `up`, you should transform your initial **up** vector, usually $$(0,1,0)$$,by `camOrientation`. To compute `center`, the point in space at which you are looking, you should transform `camIntialDir` by `camOrientation` to generate the current view direction. You can than compute `center` as the sum of `camPosition` and the current view direction.
 
-#### A working and documented user interface #### 
+### A working and documented user interface 
 
 You should implement a user interface that minimally implements the arrow-key and +/- key controls described above. 
 Your webpage should include text instructions describing how the user interface works. Simply include text in the HTML file that explains how to control the view and speed. 
 
-### Rendering Depth Fog
+## Rendering Depth Fog
 
 Your app should allow a user to generate a scene with fog. The fog will be controlled by checkbox control on the webpage.
 
-#### Modified Phong Shading
+### Modified Phong Shading
 
 The fog computation should be done per-pixel, which means implemented in the fragment shader. The details of how to implement depth fog, along with shader code to do it, can be found in:
 
@@ -197,7 +197,7 @@ Make an effort to make the fog look good. Consider doing the following:
 2. Have the fog color match the background color
 3. Experimentally find a value for `fogDensity` that generates a good result.
 
-#### User Interface
+### User Interface
 
 You should add a radio to your HTML as described in the [Mozilla HTML Docs here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
 
