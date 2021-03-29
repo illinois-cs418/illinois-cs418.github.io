@@ -83,3 +83,7 @@
   date: "Week 9 (March 25)"
   materials: "Alpha [Video](https://classtranscribe.illinois.edu/video?id=ce0ab652-220d-4ec6-aa5a-f2737977242d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-alpha.pdf)"
   title: "Compositing"
+-
+  date: "Week 10 (March 30)"
+  materials: "Z Buffer [Video](https://classtranscribe.illinois.edu/video?id=cdc75a30-1930-4c9f-afd8-2ce5fa2c1631&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/418-hidden-clean.pdf)"
+  title: "Hidden Surface Removal"
