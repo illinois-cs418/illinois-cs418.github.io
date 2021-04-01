@@ -87,3 +87,48 @@
   date: "Week 10 (March 30)"
   materials: "Z Buffer [Video](https://classtranscribe.illinois.edu/video?id=cdc75a30-1930-4c9f-afd8-2ce5fa2c1631&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/418-hidden-clean.pdf)"
   title: "Hidden Surface Removal"
+-
+  date: "Week 10 (April 1)"
+  materials: "[Exam Link](https://www.prairielearn.org/pl/course_instance/128529/assessment/2310395)"
+  title: "Exam 2"
+-
+  date: "Week 11 (April 6)"
+  materials: "Texture Mapping Overview [Video]()&nbsp;[PDF]() <br/>
+              Texture Coordinates [Video]()&nbsp;[PDF]()"
+  title: "Texture Mapping"
+-
+  date: "Week 11 (April 8)"
+  materials: "Texture Magification[Video]()&nbsp;[PDF]()<br/>
+              Texture Minification[Video]()&nbsp;[PDF]()"
+  title: "Texture Filtering"
+-
+  date: "Week 12 (April 13)"
+  materials: "Cube Maps [Video]()&nbsp;[PDF]()"
+  title: "Environment Mapping"
+-
+  date: "Week 12 (April 14)"
+  materials: "Normal Maps"
+  title: "Bump Mapping"
+-
+  date: "Week 13 (April 20)"
+  materials: "Bresenham's Algorithm [Video]()&nbsp;[PDF]() <br/>
+              Polygon Rasterization [Video]()&nbsp;[PDF]()"
+  title: "Rasterization"
+-
+  date: "Week 13 (April 22)"
+  materials: "A Physics Engine [Video]()&nbsp;[PDF]()<br/>
+              Collision Detection [Video]()&nbsp;[PDF]()"
+  title: "Physics Simulation"
+-
+  date: "Week 14 (April 27)"
+  materials: "Bezier Curves [Video]()&nbsp;[PDF]() <br/>
+              Bezier Surfaces [Video]()&nbsp;[PDF]()"
+  title: "Geometric Modeling"
+-
+  date: "Week 14 (April 29)"
+  materials: "Subdivision Surfaces [Video]()&nbsp;[PDF]()"
+  title: "Geometric Modeling"
+-
+  date: "Week 15 (May 4)"
+  materials: ""
+  title: "Exam 3"
