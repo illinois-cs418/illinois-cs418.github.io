@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title> MP3 </title>
+<meta charset="utf-8">
+</head>
+
+<script id="texture-shader-vs" type="x-shader/x-vertex">#version 300 es
+	in vec3 aVertexNormal;
+	in vec3 aVertexPosition;
+
+	uniform mat4 uMMatrix;
+    uniform mat4 uVMatrix;
+	uniform mat4 uPMatrix;
+	uniform mat3 uNMatrix;
+ 
+	out vec3 vNormal;
+    out vec3 vObjPosition;
+
+	void main(void) {
+		//Calculate the normal
+		vNormal = normalize(uNMatrix * aVertexNormal);
+
+		gl_Position = uPMatrix*uVMatrix*uMMatrix*vec4(aVertexPosition, 1.0);
+
+        // Pass the object coordinates to the fragment shader
+        vObjPosition = aVertexPosition;
+	}
+</script>
+
+<script id="texture-shader-fs" type="x-shader/x-fragment">#version 300 es
+	precision mediump float;
+
+	in vec3 vNormal;
+    in vec3 vObjPosition;
+
+    uniform lowp int mode;
+    uniform sampler2D uTexture;
+
+    out vec4 outColor;
+
+    void main(void) {
+        // ------- Generates Texture Coordinates From Object Positioin --------
+
+        // Calculate the texture coordinates using cylindrical or cubical projection
+        vec2 textureCoordinates;
+        float angle;
+        if (mode == 0) {
+            angle = atan(vObjPosition.y, vObjPosition.x) / (2.0 * 3.14159);
+            textureCoordinates = vec2( angle, vObjPosition.z );
+        } else if (mode == 1) {
+            if ( (abs(vNormal.x) > abs(vNormal.y)) && (abs(vNormal.x) > abs(vNormal.z)) ) {
+                textureCoordinates = (vNormal.x > 0.0)? vObjPosition.yz : vObjPosition.zy;
+            }
+            else if ( (abs(vNormal.z) > abs(vNormal.x)) && (abs(vNormal.z) > abs(vNormal.y)) ) {
+                textureCoordinates = (vNormal.z > 0.0) ? vObjPosition.xy : vObjPosition.yx;
+            }
+            else {
+                textureCoordinates = (vNormal.y > 0.0)? vObjPosition.zx : vObjPosition.xz;
+            }
+        }
+
+        outColor = texture(uTexture, textureCoordinates + vec2(0.5));
+
+        // -------- Generates Texture Coordinates From Object Positioin --------
+    }
+</script>
+
+<script id="phong-shader-vs" type="x-shader/x-vertex">
+	attribute vec3 aVertexNormal;
+	attribute vec3 aVertexPosition;
+
+	uniform mat4 uMMatrix;
+    uniform mat4 uVMatrix;
+	uniform mat4 uPMatrix;
+	uniform mat3 uNMatrix;
+ 
+	varying vec3 vNormal;
+	varying vec3 vPosition;
+
+	void main(void) {
+
+		// Get the vertex position in eye coordinates
+		vec4 vertexPositionEye4 = uVMatrix*uMMatrix*vec4(aVertexPosition, 1.0);
+		vPosition = vertexPositionEye4.xyz / vertexPositionEye4.w;
+		//Calculate the normal
+		vNormal = normalize(uNMatrix * aVertexNormal);
+
+		gl_Position = uPMatrix*uVMatrix*uMMatrix*vec4(aVertexPosition, 1.0);
+	}
+
+</script>
+
+<script id="phong-shader-fs" type="x-shader/x-fragment">
+	precision mediump float;
+
+	varying vec3 vNormal;
+	varying vec3 vPosition;
+
+    uniform vec3 uLightPosition;
+    uniform vec3 uAmbientLightColor;
+    uniform vec3 uDiffuseLightColor;
+    uniform vec3 uSpecularLightColor;
+
+    uniform vec3 uKAmbient;
+    uniform vec3 uKDiffuse;
+    uniform vec3 uKSpecular;
+
+    uniform float uShininess;
+
+    void main(void) {
+        // Calculate the vector (l) to the light source
+        vec3 vectorToLightSource = normalize(uLightPosition - vPosition);
+
+        // Calculate n dot l for diffuse lighting
+        float diffuseLightWeightning = max(dot(vNormal,
+                                        vectorToLightSource), 0.0);
+
+        // Calculate the reflection vector (r) that is needed for specular light
+        vec3 reflectionVector = normalize(reflect(-vectorToLightSource,
+                                                 vNormal));
+
+        // The camera in view coordinates is located in the origin and is pointing
+        // along the negative z-axis. Calculate viewVector (v)
+        // in eye coordinates as:
+        // (0.0, 0.0, 0.0) - vPosition
+        vec3 viewVectorEye = -normalize(vPosition);
+
+        float rdotv = max(dot(reflectionVector, viewVectorEye), 0.0);
+
+        float specularLightWeightning = pow(rdotv, uShininess);
+
+        // Sum up all three reflection components and set color
+        gl_FragColor = vec4(((uAmbientLightColor*uKAmbient)
+                    + (uDiffuseLightColor*uKDiffuse) * diffuseLightWeightning
+                    + (uSpecularLightColor*uKSpecular) * specularLightWeightning),1.0);
+
+    }
+</script>
+
+    
+<script id="cubemap-shader-vs" type="x-shader/x-vertex">
+    attribute vec4 aPosition;
+    varying vec4 vPosition;
+    
+    void main() {
+        vPosition = aPosition;
+        gl_Position = aPosition;
+        gl_Position.z = 1.0;
+    }
+</script>
+    
+<script id="cubemap-shader-fs" type="x-shader/x-fragment">
+    precision mediump float;
+    
+    uniform samplerCube uSkybox;
+    uniform mat4 uVDPInverse;
+    varying vec4 vPosition;
+    
+    void main() {
+        vec4 t = uVDPInverse * vPosition;
+        gl_FragColor = textureCube(uSkybox, normalize(t.xyz / t.w));
+    }
+</script>
+    
+<script id="reflect-shader-vs" type="x-shader/x-vertex">
+    attribute vec4 vPosition;
+    attribute vec4 vNormal;
+    uniform mat4 vMatrix;
+	uniform mat4 mMatrix;
+    uniform mat4 pMatrix;
+    
+	varying vec3 vWorldPosition;
+	varying vec3 vWorldNormal;
+	
+    void main() {
+        gl_Position = pMatrix*vMatrix*mMatrix*vPosition;
+		vWorldPosition = (mMatrix*vPosition).xyz;
+		vWorldNormal = (mMatrix * vNormal).xyz;
+    }
+</script>
+    
+<script id="reflect-shader-fs" type="x-shader/x-fragment">
+    precision highp float;
+    
+	varying vec3 vWorldPosition;
+	varying vec3 vWorldNormal;
+	
+    uniform samplerCube texMap;
+	
+	uniform vec3 eyePos;
+	uniform float rBool;
+    
+    void main() {
+		vec3 worldNormal = normalize(vWorldNormal);
+		vec3 eyeToSurfaceDir = normalize(vWorldPosition - eyePos);
+		
+		// rBool = 0.0  -->  Reflective
+		// rBool = 1.0  -->  Refractive
+		
+		if (rBool < 0.5) {
+			vec3 R = reflect(eyeToSurfaceDir, worldNormal);
+			gl_FragColor = textureCube(texMap, R);
+		} else {
+			vec3 R = refract(eyeToSurfaceDir, worldNormal, (1.00/1.10));
+
+			vec4 refractColor = textureCube(texMap, R);
+			refractColor = mix(refractColor, vec4(1.0,1.0,1.0,1.0), 0.2);
+			gl_FragColor = refractColor;
+		}
+		
+    }
+</script>
+    
+<script src="gl-matrix-min.js"></script>
+<script src="TriMesh.js"></script>
+<script src="MP3.js"></script>
+<body onload="startup();">
+ <canvas id="myGLCanvas" width="800" height="800"></canvas>
+    <form id="input_form">
+        <fieldset>
+            <legend>Teapot Controls</legend>
+           	<input type="radio" id="phong" name="shade" checked>
+			<label for="phong">Phong</label>
+            <input type="radio" id="reflect" name="shade">
+			<label for="reflect">Reflection</label>
+			<input type="radio" id="refract" name="shade">
+			<label for="refract">Refraction</label>
+           	<input type="radio" id="brick" name="shade">
+			<label for="texture">Brick Texture</label>
+
+            <br>
+
+           	<input type="radio" id="Cylindrical" name="projection" checked>
+			<label for="Cylindrical">Cylindrical</label>
+           	<input type="radio" id="Cubical" name="projection">
+			<label for="Cubical">Cubical</label>
+
+            <br>
+			
+			<input type="radio" id="london" name="scene" checked>
+			<label for="reflect">London</label>
+			<input type="radio" id="ike" name="scene">
+			<label for="refract">Ikenberry</label> <br>
+			
+			<input type="checkbox" id="orbit" name="orbit" value=true checked>
+			<label for="orbit">Orbit Teapot</label>
+			
+        </fieldset>
+        </form>
+</body>
+
+</html>
