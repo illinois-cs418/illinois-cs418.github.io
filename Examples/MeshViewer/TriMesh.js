@@ -44,7 +44,12 @@ class TriMesh{
     * Find a box defined by min and max XYZ coordinates
     */
     computeAABB(){
-        
+        for (var i=0; i < this.vBuffer.length; i+=3){
+            for(var j=0;j<3;j++){    
+                this.minXYZ[0+j]= Math.min(this.minXYZ[0+j],this.vBuffer[i+j]);
+                this.maxXYZ[0+j]= Math.max(this.maxXYZ[0+j],this.vBuffer[i+j]);  
+             }   
+        }   
     }
     
     /**
@@ -53,8 +58,44 @@ class TriMesh{
     * @param {Object} an array object of length 3 to fill win max XYZ coords
     */
     getAABB(minXYZ,maxXYZ){
-        
+       for(var j=0;j<3;j++){    
+                minXYZ[0+j]= this.minXYZ[0+j];
+                maxXYZ[0+j]= this.maxXYZ[0+j];  
+             }     
     }
+    
+   /**
+   * Populate buffers with data
+   */
+  readFile(filename) {
+    var myPromise = this.asyncGetFile(filename);
+    myPromise.then((retrievedText) => {
+        this.loadFromOBJ(retrievedText);
+        console.log("Yay! Got the file");
+    })
+    .catch(
+        (reason) => {
+            console.log('Handle rejected promise ('+reason+') here.');
+        });
+}
+
+//------------------------------------------------------------------------
+/**
+ * Asynchronously read a server-side text file
+ */
+ asyncGetFile(url) {
+    console.log("Getting text file");
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.onload = () => resolve(xhr.responseText);
+        xhr.onerror = () => reject(xhr.statusText);
+        xhr.send();
+        console.log("Made promise");
+    });
+}
+    
+    
     
     /**
     * Populate the JS arrays by parsing a string containing an OBJ file
@@ -95,6 +136,9 @@ class TriMesh{
         
         myMesh.loadBuffers();
         this.isLoaded = true;
+        
+        this.computeAABB();
+        console.log("AABB: \n",this.minXYZ, " ", this.maxXYZ);
     }
     
     
@@ -312,6 +356,18 @@ generateNormals(){
             this.nBuffer[3*i+1]=n[1];
             this.nBuffer[3*i+2]=n[2];  
         }
-}    
+}
+    
+ canonicalTransform(modelMatrix){
+     var center = glMatrix.vec3.create();
+     var scaleFactors = glMatrix.vec3.create();
+     
+     for(var j=0;j<3;j++){    
+                center[j]=-1.0*((this.minXYZ[0+j]+ this.maxXYZ[0+j])/2.0);
+                scaleFactors[j]=1.0/(this.maxXYZ[0+j]- this.minXYZ[0+j]);
+             }
+     glMatrix.mat4.fromTranslation(modelMatrix,center);
+     glMatrix.mat4.scale(modelMatrix,scaleFactors);
+ }
     
 }

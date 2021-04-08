@@ -26,8 +26,17 @@ var vertexArrayObject;
 /** @global The rotation angle of our triangle */
 var rotAngle = 0;
 
+/** @global The Model matrix contains any modeling transformations */
+var modelMatrix = glMatrix.mat4.create();
+
+/** @global The projection matrix contains the perspective transformation */
+var projectionMatrix = glMatrix.mat4.create();
+
 /** @global The ModelView matrix contains any modeling and viewing transformations */
 var modelViewMatrix = glMatrix.mat4.create();
+
+/** @global The Normal matrix contains any modeling and viewing transformations to apply to normals */
+var normalMatrix = glMatrix.mat4.create();
 
 /** @global Records time last frame was rendered */
 var previousTime = 0;
@@ -179,56 +188,7 @@ function setupShaders() {
 }
 
 
-/**
- * Set up the buffers to hold the triangle's vertex positions and colors.
- */
-function setupBuffers() {
-    
-  // Create the vertex array object, which holds the list of attributes for
-  // the triangle.
-  vertexArrayObject = gl.createVertexArray();
-  gl.bindVertexArray(vertexArrayObject); 
 
-  // Create a buffer for positions, and bind it to the vertex array object.
-  vertexPositionBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
-
-  // Define a triangle in clip coordinates.
-  var vertices = [
-         0.0,  0.5,  0.0,
-        -0.5, -0.5,  0.0,
-         0.5, -0.5,  0.0
-  ];
-  // Populate the buffer with the position data.
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
-  vertexPositionBuffer.itemSize = 3;
-  vertexPositionBuffer.numberOfItems = 3;
-
-  // Binds the buffer that we just made to the vertex position attribute.
-  gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 
-                         vertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-  
-  // Do the same steps for the color buffer.
-  vertexColorBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, vertexColorBuffer);
-  var colors = [
-        1.0, 0.0, 0.0, 1.0,
-        0.0, 1.0, 0.0, 1.0,
-        0.0, 0.0, 1.0, 1.0
-    ];
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
-  vertexColorBuffer.itemSize = 4;
-  vertexColorBuffer.numItems = 3;  
-  gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, 
-                         vertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
-    
-   // Enable each attribute we are using in the VAO.  
-  gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
-  gl.enableVertexAttribArray(shaderProgram.vertexColorAttribute);
-    
-  // Unbind the vertex array object to be safe.
-  gl.bindVertexArray(null);
-}
 
 
 /**
@@ -240,26 +200,43 @@ function draw() {
 
   // Clear the screen.
   gl.clear(gl.COLOR_BUFFER_BIT);
-
-  // Use the vertex array object that we set up.
-  gl.bindVertexArray(vertexArrayObject);
-    
-  // Send the ModelView matrix with our transformations to the vertex shader.
-  gl.uniformMatrix4fv(shaderProgram.modelViewMatrixUniform,
-                      false, modelViewMatrix);
-    
-  // Render the triangle. 
-  gl.drawArrays(gl.TRIANGLES, 0, vertexPositionBuffer.numberOfItems);
   
-  // Unbind the vertex array object to be safe.
-  gl.bindVertexArray(null);
+  // Generate the view matrix using lookat.
+  const lookAtPt = glMatrix.vec3.fromValues(0.0, 0.0, 0.0);
+  const eyePt = glMatrix.vec3.fromValues(0.0, 10.0, 1.0);
+  const up = glMatrix.vec3.fromValues(0.0, 0.0, 1.0);
+    
+  glMatrix.mat4.lookAt(viewMatrix, eyePt, lookAtPt, up);
+
+  // Rotate the model about the z-axis by the current rotation angle.
+  glMatrix.mat4.rotateY(modelViewMatrix, modelMatrix,
+                        degToRad(rotationAngle));
+    
+  glMatrix.mat4.multiply(modelViewMatrix,viewMatrix,modelViewMatrix);
+    
+  setMatrixUniforms();
+    
+  setLightUniforms(ambientLightColor, diffuseLightColor, specularLightColor,
+                   lightPosition);
+  
+  // Draw the triangles, the wireframe, or both, based on the render selection.
+  if (document.getElementById("polygon").checked) { 
+    setMaterialUniforms(kAmbient, kDiffuse, kSpecular, shininess);
+    myMesh.drawTriangles();
+  }
+  else if (document.getElementById("wirepoly").checked) {
+    setMaterialUniforms(kAmbient, kDiffuse, kSpecular, shininess); 
+    myMesh.drawTriangles();
+    setMaterialUniforms(kAmbient, kEdgeBlack, kSpecular, shininess);
+    myMesh.drawEdges();
+  }
+  else if (document.getElementById("wireframe").checked) {
+    setMaterialUniforms(kAmbient, kEdgeWhite, kSpecular, shininess);
+    myMesh.drawEdges();    
+  }
 }
 
 function handleKeyDown(event){
-           if (event.key == "ArrowUp")
-             T+= 9;
-           if (event.key == "ArrowDown")
-             T-= 9;
         }
 
 /**
@@ -289,7 +266,6 @@ function handleKeyDown(event){
   
   // Animate the next frame. The animate function is passed the current time in
   // milliseconds.
-  console.log(T);
   requestAnimationFrame(animate);
 }
 
@@ -301,6 +277,19 @@ function handleKeyDown(event){
   console.log("Starting animation...");
   canvas = document.getElementById("myGLCanvas");
   gl = createGLContext(canvas);
+     
+  // Load OBJ file
+  myMesh = new TriMesh();
+  myMesh.readFile("teapot.obj");
+  myMesh.canonicalTransform(modelMatrix);
+    
+  // Generate the projection matrix using perspective projection.
+  const near = 0.1;
+  const far = 200.0;
+  glMatrix.mat4.perspective(projectionMatrix, degToRad(45), 
+                            gl.viewportWidth / gl.viewportHeight,
+                            near, far);
+       
   setupShaders(); 
   setupBuffers();
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
