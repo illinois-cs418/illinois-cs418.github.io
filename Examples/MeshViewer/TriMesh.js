@@ -362,12 +362,12 @@ generateNormals(){
      var center = glMatrix.vec3.create();
      var scaleFactors = glMatrix.vec3.create();
      
-     for(var j=0;j<3;j++){    
-                center[j]=-1.0*((this.minXYZ[0+j]+ this.maxXYZ[0+j])/2.0);
-                scaleFactors[j]=1.0/(this.maxXYZ[0+j]- this.minXYZ[0+j]);
-             }
+     //for(var j=0;j<3;j++){    
+    //            center[j]=-1.0*((this.minXYZ[0+j]+ this.maxXYZ[0+j])/2.0);
+    //            scaleFactors[j]=1.0/(this.maxXYZ[0+j]- this.minXYZ[0+j]);
+      //       }
      glMatrix.mat4.fromTranslation(modelMatrix,center);
-     glMatrix.mat4.scale(modelMatrix,scaleFactors);
+     glMatrix.mat4.scale(modelMatrix,modelMatrix,scaleFactors);
  }
     
 }

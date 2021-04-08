@@ -195,12 +195,17 @@ function setupShaders() {
  * Draws a frame to the screen.
  */
 function draw() {
+
   // Transform the clip coordinates so the render fills the canvas dimensions.
   gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
 
   // Clear the screen.
   gl.clear(gl.COLOR_BUFFER_BIT);
   
+  if (myMesh.loaded() ){
+      
+  myMesh.canonicalTransform(modelMatrix);
+      
   // Generate the view matrix using lookat.
   const lookAtPt = glMatrix.vec3.fromValues(0.0, 0.0, 0.0);
   const eyePt = glMatrix.vec3.fromValues(0.0, 10.0, 1.0);
@@ -234,6 +239,7 @@ function draw() {
     setMaterialUniforms(kAmbient, kEdgeWhite, kSpecular, shininess);
     myMesh.drawEdges();    
   }
+ }
 }
 
 function handleKeyDown(event){
@@ -258,8 +264,6 @@ function handleKeyDown(event){
   rotAngle += speed * deltaTime;
   if (rotAngle > 360.0)
       rotAngle = 0.0;
-  glMatrix.mat4.fromZRotation(modelViewMatrix, degToRad(rotAngle));
-  setupBuffers();     
 
   // Draw the frame.
   draw();
@@ -281,7 +285,6 @@ function handleKeyDown(event){
   // Load OBJ file
   myMesh = new TriMesh();
   myMesh.readFile("teapot.obj");
-  myMesh.canonicalTransform(modelMatrix);
     
   // Generate the projection matrix using perspective projection.
   const near = 0.1;
@@ -291,9 +294,7 @@ function handleKeyDown(event){
                             near, far);
        
   setupShaders(); 
-  setupBuffers();
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  document.onkeydown = handleKeyDown;
   requestAnimationFrame(animate); 
 }
 
