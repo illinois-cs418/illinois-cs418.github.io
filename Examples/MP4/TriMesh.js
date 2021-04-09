@@ -101,22 +101,6 @@ class TriMesh{
     loadFromOBJ(fileText)
     {    
         //Your code here
-        var lines = fileText.split("\n");
-        
-        var tokens = [];
-        for (var i = 0; i < lines.length; i++) {
-            tokens = lines[i].split(/\b\s+(?!$)/);
-            if (tokens[0] == "v") {
-                this.vBuffer.push(parseFloat(tokens[1]));
-                this.vBuffer.push(parseFloat(tokens[2]));
-                this.vBuffer.push(parseFloat(tokens[3]));
-            }
-            if (tokens[0] == "f") {
-                this.fBuffer.push(parseInt(tokens[1])-1);
-                this.fBuffer.push(parseInt(tokens[2])-1);
-                this.fBuffer.push(parseInt(tokens[3])-1);
-            }
-        }
         
         this.numVertices = this.vBuffer.length / 3;
         this.numFaces = this.fBuffer.length / 3;  
@@ -356,16 +340,7 @@ class TriMesh{
     */    
     
     canonicalTransform(){
-        var center = glMatrix.vec3.create();
-        var maxScale = 0;
-        for(var j=0;j<3;j++){    
-                center[j]=-1.0*((this.minXYZ[0+j]+ this.maxXYZ[0+j])/2.0);
-                maxScale= Math.max(maxScale,(this.maxXYZ[0+j]- this.minXYZ[0+j]));
-             }
-        maxScale=1.0/maxScale;
-        glMatrix.mat4.fromScaling(this.modelMatrix,               
-                               glMatrix.vec3.fromValues(maxScale,maxScale,maxScale));
-        glMatrix.mat4.translate(this.modelMatrix,this.modelMatrix,center);
+      //Your code here
      
     }
     
