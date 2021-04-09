@@ -18,10 +18,14 @@ rubric:
     name: Generate Texture Coordinates
     points: 10
     description: Appropriate per-vertex texture coordinates are generated for the teapot
-    
+-    
     name: Texture Mapping
-    points: 15
-    description: Teapot is texture-mapped using an interesting image texture and shaded using the Phong or Blinn-Phong reflection model.
+    points: 10
+    description: Teapot is texture-mapped using an interesting image texture.
+-
+    name: Shading
+    points: 5
+    description: Phong shading and the Phong reflection model are used and the teapot is well-lit
 - 
     name: Model Rotation Using a Mouse
     points: 10
