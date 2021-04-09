@@ -8,24 +8,20 @@ points: 50
 rubric:
 -
     name: OBJ File Reader
-    points: 10
+    points: 5
     description: OBJ file for the teapot is parsed correctly and loaded into buffers 
 -
-    name: View
-    points: 5
+    name: View 
+    points: 10
     description: The view of the teapot shows the entire mesh and is non-distorted 
--
-    name: Shading
-    points: 5
-    description: Phong shading and the Blinn-Phong reflection model are used and the teapot is well-lit    
 - 
     name: Generate Texture Coordinates
     points: 10
     description: Appropriate per-vertex texture coordinates are generated for the teapot
     
     name: Texture Mapping
-    points: 10
-    description: Teapot is texture-mapped using an interesting image texture
+    points: 15
+    description: Teapot is texture-mapped using an interesting image texture and shaded using the Phong or Blinn-Phong reflection model.
 - 
     name: Model Rotation Using a Mouse
     points: 10
