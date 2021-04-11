@@ -77,15 +77,15 @@ Typically, for security reasons your browser will not allow JS code to directly 
 + Alternatively, you can install [node.js](https://nodejs.org/en/) Then install and run [httpserver](https://www.npmjs.com/package/httpserver) to serve the directory that you are in when you issue the command
 + if you have python on your system, use a command prompt to do `python -m http.server` which will serve files from the directory in which you issued the command. Theses will typically be served at `http://127.0.0.1:8000`. 
 
-### Phong Shading
-
-Coming soon.
-
 ### Generating Texture Coordinates
 Coming soon.
 
 ### Texture Mapping
 Coming soon.
+
+### Phong Shading
+
+You should shade the color sampled from the texture so that it looks like it is really in the 3D scene you are drawing. This means that you should use the sampled color from the texture in place of `kAmbient` and `kDiffuse` in the reflection model...effectively making it the material color. Since specular highlights are usually white, it would make sense to keep `kSpecular` as white. 
 
 ### User Interaction Using a Mouse 
 
@@ -120,7 +120,7 @@ The value `e.offsetX` is the location of the mouse pointer when the event happen
 
 When a mouse button is down and the mouse moves, you should take the difference `e.offsetX - x` and add it to `rotY`. You should also update the global `x` and `y` variables to the values `e.offsetX` and `e.offsetY`.
 
-In the `draw` function, you should apply a Y rotation to model before applying the view transformation:
+In the `draw` function, you should apply a Y rotation to the model before applying the view transformation:
 
 ~~~javascript
 glMatrix.mat4.identity(modelViewMatrix);
