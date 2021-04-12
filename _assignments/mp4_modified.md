@@ -81,7 +81,7 @@ Typically, for security reasons your browser will not allow JS code to directly 
 ### Texture Mapping
 Now we will load an image to use as a texture and send it to the fragment shader as a `uniform`. You can use the file [brick.jpg](https://illinois-cs418.github.io/img/brick.jpg) or a different image if you wish.
 
-We will start be creating a global variable for the texture:
+We will start by creating a global variable for the texture:
 
 ~~~javascript
 /** @global Image texture to mapped onto mesh */
@@ -105,6 +105,7 @@ function loadTexture(filename){
               new Uint8Array([0, 0, 255, 255]));
  
 	// Asynchronously load an image
+	// If image load unsuccessful, it will be a blue surface
 	var image = new Image();
 	image.src = filename;
 	image.addEventListener('load', function() {
