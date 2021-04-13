@@ -103,13 +103,13 @@
   title: "Texture Filtering"
 -
   date: "Week 12 (April 13)"
+  materials: ""
+  title: "Spring Break Day"
+-
+  date: "Week 12 (April 15)"
   materials: "Cube Maps [Video]()&nbsp;[PDF]()<br/>
               Normal Maps [Video]()&nbsp;[PDF]()"
   title: "Environment Mapping"
--
-  date: "Week 12 (April 14)"
-  materials: ""
-  title: "Mystery Topic!"
 -
   date: "Week 13 (April 20)"
   materials: "Bresenham's Algorithm [Video]()&nbsp;[PDF]() <br/>
