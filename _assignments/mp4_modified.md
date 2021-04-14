@@ -76,7 +76,7 @@ Typically, for security reasons your browser will not allow JS code to directly 
 
 + If you use the Brackets editor, the live preview function will start up a server (and browser) to test your code. Just have Chrome open, and the open your html file in Brackets. Click the lightning bolt icon in the top right of the Brackets window.
 + Alternatively, you can install [node.js](https://nodejs.org/en/) Then install and run [httpserver](https://www.npmjs.com/package/httpserver) to serve the directory that you are in when you issue the command
-+ if you have python on your system, use a command prompt to do `python -m http.server` which will serve files from the directory in which you issued the command. These will typically be served at `http://127.0.0.1:8000`. 
++ if you have python on your system, use a command prompt to do `python2 -m SimpleHTTPServer` or `python3 -m http.server` which will serve files from the directory in which you issued the command. These will typically be served at `http://127.0.0.1:8000`. 
 
 ### Texture Mapping
 Now we will load an image to use as a texture and send it to the fragment shader as a `uniform`. You can use the file [brick.jpg](https://illinois-cs418.github.io/img/brick.jpg) or a different image if you wish.
