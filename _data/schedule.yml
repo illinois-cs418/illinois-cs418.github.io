@@ -107,9 +107,9 @@
   title: "Spring Break Day"
 -
   date: "Week 12 (April 15)"
-  materials: "Cube Maps [Video]()&nbsp;[PDF]()<br/>
-              Normal Maps [Video]()&nbsp;[PDF]()"
-  title: "Environment Mapping"
+  materials: "Cube Maps [Video](https://classtranscribe.illinois.edu/video?id=b8b41f09-e833-48a4-9a2a-ace57e6c2479&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-5.pdf)<br/>
+              Normal Maps [Video](https://classtranscribe.illinois.edu/video?id=48ce1dde-279f-43cf-b32f-db27a809cfd8&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-6.pdf)"
+  title: "Environment and Bump Mapping"
 -
   date: "Week 13 (April 20)"
   materials: "Bresenham's Algorithm [Video]()&nbsp;[PDF]() <br/>
