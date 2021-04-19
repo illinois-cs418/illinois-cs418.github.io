@@ -112,18 +112,19 @@
   title: "Environment and Bump Mapping"
 -
   date: "Week 13 (April 20)"
+  materials: "A Physics Engine [Video](https://classtranscribe.illinois.edu/video?id=4800e988-4f5d-4559-a3bc-beae3f3cfd3d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Physics.pdf)<br/>
+              Collision Detection [Video](https://classtranscribe.illinois.edu/video?id=9216122a-bd3b-4641-ab4f-8080949c624b&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Collide.pdf) <br/>
+              Euler's Method [Video](https://classtranscribe.illinois.edu/video?id=bd611499-ac64-4766-98c2-c3eeaebb16e2&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-EulersMethod.pdf)"
+  title: "Physics Simulation"
+-
+  date: "Week 13 (April 22)"
   materials: "Bresenham's Algorithm [Video]()&nbsp;[PDF]() <br/>
               Polygon Rasterization [Video]()&nbsp;[PDF]()"
   title: "Rasterization"
 -
-  date: "Week 13 (April 22)"
-  materials: "A Physics Engine [Video]()&nbsp;[PDF]()<br/>
-              Collision Detection [Video]()&nbsp;[PDF]()"
-  title: "Physics Simulation"
--
   date: "Week 14 (April 27)"
-  materials: "Bezier Curves [Video]()&nbsp;[PDF]() <br/>
-              Bezier Surfaces [Video]()&nbsp;[PDF]()"
+  materials: "Bezier Curves [Video](https://classtranscribe.illinois.edu/video?id=4d21ccd0-fa3d-41a1-b5ac-e0337f7a6951&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-BezCurves.pdf) <br/>
+              Bezier Surfaces [Video](https://classtranscribe.illinois.edu/video?id=33d4bdbd-0b51-4e59-8457-0006b65f618f&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-BezPatch.pdf)"
   title: "Geometric Modeling"
 -
   date: "Week 14 (April 29)"
