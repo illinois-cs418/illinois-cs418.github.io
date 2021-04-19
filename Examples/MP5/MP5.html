@@ -1,16 +1,16 @@
 <!DOCTYPE HTML> 
 <html lang="en"> 
 <head>
-<title>MP5: Artistic Shading</title>
+<title>MP5: Physics!</title>
 <meta charset="utf-8"> 
 </head>
 
 <!-- If you add additional .js files, be sure to add them here. -->
 <script src="gl-matrix-min.js"></script>
-<script src="TriMesh.js"></script>
+<script src="Sphere.js"></script>
 <script src="MP5.js"></script>
 
-<!-- MP2: Modify the shaders to implement Phong shading instead of Gourand! -->
+<!-- Modify to include diffuse material clor as an attribute! -->
 <script id="shader-vs" type="x-shader/x-vertex">#version 300 es
 // Vertex Shader
 // Implements Phong shading. See the lecture on "Basic Shading" for details.
@@ -31,7 +31,6 @@ uniform mat3 normalMatrix;
 
 out vec3 fragPosition;
 out vec3 fragNormal;
-out vec2 v_texcoord;
 
 const float pi = 3.141592653589793;
 
@@ -39,11 +38,6 @@ void main(void) {
     // Transform the vertex position and normal to view coordinates
     fragPosition =(modelViewMatrix * vec4(vertexPosition, 1.0)).xyz;
     fragNormal = normalize(normalMatrix * vertexNormal);
-
-    float s = (atan(vertexPosition.z,vertexPosition.x)+pi)/(2.0*pi); 
-    float t = vertexPosition.y;
-    
-    v_texcoord = vertexPosition.xy;
 
     gl_Position = projectionMatrix * modelViewMatrix * vec4(vertexPosition, 1.0);
 }
