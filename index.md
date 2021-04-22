@@ -57,7 +57,7 @@ There will be short weekly quizzes on [PrairieLearn](https://prairielearn.engr.i
 + These quizzes will be based on the lecture material and will serve as practice for the exams.
 
 ### Programming Assignments ###
-There will a series of six programming assignments. <br/>
+There will a series of five programming assignments. <br/>
 **Please read the [Assignments page](/assignments) for details of how code development will be done.**
 
 ### 4 Credit Project ###
@@ -84,8 +84,7 @@ We weight grades as follows:
 | MP 2 | 5% | 5% | 
 | MP 3 | 5% | 5% | 
 | MP 4 | 5% | 5% | 
-| MP 5 | 5% | 5% | 
-| MP 6 | 10% | 5% | 
+| MP 5 | 15% | 10% | 
 | Weekly Quizzes| 15%  | 15%  |
 | Exam Grade| 45% | 45% |   
 | 4 Credit Project | | 10% |  
