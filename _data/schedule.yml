@@ -118,8 +118,9 @@
   title: "Physics Simulation"
 -
   date: "Week 13 (April 22)"
-  materials: "Bresenham's Algorithm [Video]()&nbsp;[PDF]() <br/>
-              Polygon Rasterization [Video]()&nbsp;[PDF]()"
+  materials: "Line Rasterization [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/07-1%20Line%20Rasterization.pdf) <br/>
+              Polygon Rasterization [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/CS418-PolygonRasterization.pdf) <br/>
+              [Video](https://classtranscribe.illinois.edu/video?id=77168516-77f4-421e-bb14-afcfd6596dfb&from=sharedlink)"
   title: "Rasterization"
 -
   date: "Week 14 (April 27)"
