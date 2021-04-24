@@ -32,7 +32,7 @@ rubric:
     description: Have an interface which allows users to generate more spheres, maybe with a button press. Also allow users to remove all the spheres with a button press.
 ---
 
-![spheres](illinois-cs418.github.io/img/mp4.png){:height="400px" width="400px"}   
+![spheres](http://illinois-cs418.github.io/img/mp4.png){:height="400px" width="400px"}   
 
 ### Overview
 
@@ -46,7 +46,7 @@ When a sphere hits one of the walls in the box, it should reflect in physically 
 
 The following code renders a single stationary sphere. You can adapt it as the basis for your MP.
 
- + [MP5.html](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/MP5/MP5.html)
++ [MP5.html](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/MP5/MP5.html)
 + [MP5.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/MP5/MP5.js)
 + [Sphere.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/MP5/Sphere.js)
 + [gl-matrix-min.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/MP5/gl-matrix-min.js)
