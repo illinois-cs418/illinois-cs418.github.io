@@ -1,7 +1,7 @@
 /**
  * @file MP5.js - A simple WebGL rendering engine
  * @author Ian Rudnick <itr2@illinois.edu>
- * @brief Starter code for CS 418 MP2 at the University of Illinois at
+ * @brief Starter code for CS 418 MP5 at the University of Illinois at
  * Urbana-Champaign.
  * 
  * Updated Spring 2021 for WebGL 2.0/GLSL 3.00 ES.
@@ -17,7 +17,7 @@ var canvas;
 var shaderProgram;
 
 /** @global An object holding the geometry for your 3D model */
-var myMesh;
+var sphere1;
 
 /** @global The Model matrix */
 var modelViewMatrix = glMatrix.mat4.create();
@@ -30,44 +30,21 @@ var normalMatrix = glMatrix.mat3.create();
 
 // Material parameters
 /** @global Ambient material color/intensity for Phong reflection */
-var kAmbient = [227/255, 191/255, 76/255];
+var kAmbient = [0.25, 0.75, 1.0];
 /** @global Diffuse material color/intensity for Phong reflection */
-var kDiffuse = [227/255, 191/255, 76/255];
+var kDiffuse = [0.25, 0.75, 1.0];
 /** @global Specular material color/intensity for Phong reflection */
-var kSpecular = [227/255, 191/255, 76/255];
+var kSpecular = [0.25, 0.75, 1.0];
 /** @global Shininess exponent for Phong reflection */
 var shininess = 2;
 
-// Light parameters
-/** @global Light position in VIEW coordinates */
-var lightPosition = [0, 2, 2];
-/** @global Ambient light color/intensity for Phong reflection */
-var ambientLightColor = [0.1, 0.1, 0.1];
-/** @global Diffuse light color/intensity for Phong reflection */
-var diffuseLightColor = [1, 1, 1];
-/** @global Specular light color/intensity for Phong reflection */
-var specularLightColor = [1, 1, 1];
+/** @global Ambient light color */
+const lAmbient = [0.4, 0.4, 0.4];
+/** @global Diffuse light color */
+const lDiffuse = [1.0, 1.0, 1.0];
+/** @global Specular  light color */
+const lSpecular = [1.0, 1.0, 1.0];
 
-//Camera parameters
-/** @global point being lookat at in World coordinates */
-const lookAtPt = glMatrix.vec3.fromValues(0.0, 0.0, -1.0);
-/** @global camera location in World coordinates */
-const eyePt = glMatrix.vec3.fromValues(0.0, 0.0, 1.5);
-/** @global vertical direction of camera in World coordinates */
-const up = glMatrix.vec3.fromValues(0.0, 1.0, 0.0); 
-
-/** @global Edge color for black wireframe */
-var kEdgeBlack = [0.0, 0.0, 0.0];
-/** @global Edge color for white wireframe */
-var kEdgeWhite = [0.7, 0.7, 0.7];
-
-/** @global Is a mouse button pressed? */
-var isDown = false;
-/** @global Mouse coordinates */
-var x = -1;
-var y = -1;
-/** @global Rotation around Y */
-var rotY = 0;
 
 /**
  * Translates degrees to radians
@@ -79,7 +56,7 @@ function degToRad(degrees) {
 }
 
 //-----------------------------------------------------------------------------
-// Setup functions (run once)
+// Setup functions (run once when the webpage loads)
 /**
  * Startup function called from the HTML code to start program.
  */
@@ -88,51 +65,29 @@ function startup() {
   canvas = document.getElementById("glCanvas");
   gl = createGLContext(canvas);
 
-  // Compile and link the shader program.
+  // Compile and link a shader program.
   setupShaders();
 
-  // Let the mesh object set up its own buffers.
-  myMesh = new TriMesh();
-  myMesh.readFile("teapot.obj");
+  // Create a sphere mesh and set up WebGL buffers for it.
+  sphere1 = new Sphere(5);
+  sphere1.setupBuffers(shaderProgram);
   
-  // Generate the projection matrix using perspective projection.
+  // Create the projection matrix with perspective projection.
   const near = 0.1;
   const far = 200.0;
   glMatrix.mat4.perspective(projectionMatrix, degToRad(45), 
                             gl.viewportWidth / gl.viewportHeight,
                             near, far);
-  // Setup event listeners
-  // Add the event listeners for mousedown, mousemove, and mouseup
-  canvas.addEventListener('mousedown', e => {
-    x = e.offsetX;
-    y = e.offsetY;
-    isDown = true;
-  });
-  
-  canvas.addEventListener('mouseup', e => {
-    isDown = false;
-  });
-
-  canvas.addEventListener('mousemove', e => {
-        if (isDown === true) {
-            deltaY = e.offsetX - x;
-            rotY+=deltaY;
-            x    = e.offsetX;
-            y    = e.offsetY;
-        }
-    });
     
-  // Set the background color to sky blue (you can change this if you like).    
-  gl.clearColor(0.82, 0.93, 0.99, 1.0);
-
+  // Set the background color to black (you can change this if you like).    
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.enable(gl.DEPTH_TEST);
   gl.enable(gl.CULL_FACE);
+
+  // Start animating.
   requestAnimationFrame(animate);
 }
 
-/**
- * Load a texture from an image.
- */
 
 /**
  * Creates a WebGL 2.0 context.
@@ -204,8 +159,8 @@ function setupShaders() {
     alert("Failed to setup shaders");
   }
 
-  // We only need the one shader program for this rendering, so we can just
-  // bind it as the current program here.
+  // If you have multiple different shader programs, you'll need to move this
+  // function to draw() and call it whenever you want to switch programs
   gl.useProgram(shaderProgram);
 
   // Query the index of each attribute and uniform in the shader program.
@@ -221,9 +176,6 @@ function setupShaders() {
     gl.getUniformLocation(shaderProgram, "projectionMatrix");
   shaderProgram.locations.normalMatrix =
     gl.getUniformLocation(shaderProgram, "normalMatrix");
-    
-  shaderProgram.locations.uSampler =
-    gl.getUniformLocation(shaderProgram, "u_texture");
 
   shaderProgram.locations.kAmbient =
     gl.getUniformLocation(shaderProgram, "kAmbient");
@@ -244,51 +196,52 @@ function setupShaders() {
   gl.getUniformLocation(shaderProgram, "specularLightColor");
 }
 
+//-----------------------------------------------------------------------------
+// Animation functions (run every frame)
 /**
- *
+ * Draws the current frame and then requests to draw the next frame.
+ * @param {number} currentTime The elapsed time in milliseconds since the
+ *    webpage loaded. 
  */
-function drawMesh(){
-  // Draw the triangles, the wireframe, or both, based on the render selection.
-  if (document.getElementById("polygon").checked) { 
-    setMaterialUniforms(kAmbient, kDiffuse, kSpecular, shininess);
-    myMesh.drawTriangles(shaderProgram);
-  }
-  else if (document.getElementById("wirepoly").checked) {
-    setMaterialUniforms(kAmbient, kDiffuse, kSpecular, shininess); 
-    gl.enable(gl.POLYGON_OFFSET_FILL);
-    gl.polygonOffset(1, 1);
-    myMesh.drawTriangles(shaderProgram);
-    gl.disable(gl.POLYGON_OFFSET_FILL);
-    setMaterialUniforms(kEdgeBlack, kEdgeBlack, kEdgeBlack, shininess);
-    myMesh.drawEdges(shaderProgram);
-  }
-  else if (document.getElementById("wireframe").checked) {
-    setMaterialUniforms(kEdgeBlack, kEdgeBlack, kEdgeBlack, shininess);
-    myMesh.drawEdges(shaderProgram);
-  }    
-}
+function animate(currentTime) {
+  // Add code here using currentTime if you want to add animations
 
-/**
- * Draws the mesh to the screen.
- */
-function draw() {
-  // Transform the clip coordinates so the render fills the canvas dimensions.
+  // Set up the canvas for this frame
   gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
-  // Clear the color buffer and the depth buffer.
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
   
-  // Generate the view matrix using lookat.
-  glMatrix.mat4.identity(modelViewMatrix);
-  glMatrix.mat4.rotateY(modelViewMatrix,myMesh.getModelTransform(),degToRad(rotY));
+  var modelMatrix = glMatrix.mat4.create();
+  var viewMatrix = glMatrix.mat4.create();
+
+  // Create the view matrix using lookat.
+  const lookAtPt = glMatrix.vec3.fromValues(0.0, 0.0, 0.0);
+  const eyePt = glMatrix.vec3.fromValues(0.0, 0.0, 10.0);
+  const up = glMatrix.vec3.fromValues(0.0, 1.0, 0.0); 
   glMatrix.mat4.lookAt(viewMatrix, eyePt, lookAtPt, up);
-  glMatrix.mat4.multiply(modelViewMatrix,  viewMatrix,modelViewMatrix);
-    
-      
+
+  // Concatenate the model and view matrices.
+  // Remember matrix multiplication order is important.
+  glMatrix.mat4.multiply(modelViewMatrix, viewMatrix, modelMatrix);
+
   setMatrixUniforms();
-  setLightUniforms(ambientLightColor, diffuseLightColor, specularLightColor,
-                   lightPosition);
-  
-  drawMesh();
+
+  // Transform the light position to view coordinates
+  var lightPosition = glMatrix.vec3.fromValues(5, 5, -5);
+  glMatrix.vec3.transformMat4(lightPosition, lightPosition, viewMatrix);
+
+  setLightUniforms(lAmbient, lDiffuse, lSpecular, lightPosition);
+  setMaterialUniforms(kAmbient, kDiffuse, kSpecular, shininess);
+
+  // You can draw multiple spheres by changing the modelViewMatrix, calling
+  // setMatrixUniforms() again, and calling gl.drawArrays() again for each
+  // sphere. You can use the same sphere object and VAO for all of them,
+  // since they have the same triangle mesh.
+  sphere1.bindVAO();
+  gl.drawArrays(gl.TRIANGLES, 0, sphere1.numTriangles*3);
+  sphere1.unbindVAO();
+
+  // Use this function as the callback to animate the next frame.
+  requestAnimationFrame(animate);
 }
 
 
@@ -341,27 +294,3 @@ function setLightUniforms(a, d, s, loc) {
   gl.uniform3fv(shaderProgram.locations.lightPosition, loc);
 }
 
-/**
- * Animates...allows user to change the geometry view between
- * wireframe, polgon, or both.
- */
- function animate(currentTime) {
-  
-     
-     
-  if (myMesh.loaded()){
-        draw();
-  }
-  // Animate the next frame. 
-  requestAnimationFrame(animate);
-}
-
-
-
-function mouseDown() {
-  console.log("The mouse button is held down.");
-}
-
-function mouseUp() {
-  console.log("You released the mouse button.");
-}
