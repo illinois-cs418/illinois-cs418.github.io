@@ -88,7 +88,7 @@ After rendering a frame showing the current position of the spheres, you will ne
 + Update the velocity using the acceleration and Euler integration and **drag**.
 + Update the position using the current velocity and Euler integration
 
-When a sphere hits the floor and the change in position in the next frame falls below some threshold $\epsilon$ you should set the velocity to $$(0,0,0)$$ and clamp the sphere to the floor and stop moving the sphere. You may want to add a Boolean flag to your particle representation that indicates you should not update the particle anymore
+When a sphere hits the floor and the change in position in the next frame falls below some threshold $$\epsilon$$ you should set the velocity to $$(0,0,0)$$ and clamp the sphere to the floor and stop moving the sphere. You may want to add a Boolean flag to your particle representation that indicates you should not update the particle anymore
 
 #### Reference
 
