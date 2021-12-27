@@ -88,47 +88,59 @@
   materials: "Z Buffer [Video](https://classtranscribe.illinois.edu/video?id=cdc75a30-1930-4c9f-afd8-2ce5fa2c1631&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/418-hidden-clean.pdf)"
   title: "Hidden Surface Removal"
 -
-  date: "Week 10 (April 1)"
+  date: "Week 10 (March 23)"
   materials: "[Exam Link](https://www.prairielearn.org/pl/course_instance/128529/assessment/2310483)"
   title: "Exam 2"
 -
-  date: "Week 11 (April 6)"
+  date: "Week 11 (March 25)"
   materials: "Texture Mapping Overview [Video](https://classtranscribe.illinois.edu/video?id=30eac58a-d232-4b79-b9a3-5d24ff69d662&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-texture.pdf)<br/>
               Interpolation [Video](https://classtranscribe.illinois.edu/video?id=3a13845f-b49a-4efb-bf80-f0011895190d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-3.pdf)"
   title: "Texture Mapping"
 -
-  date: "Week 11 (April 8)"
+  date: "Week 11 (March 30)"
   materials: "Texture Magification [Video](https://classtranscribe.illinois.edu/video?id=5bfdda06-67f6-43a2-bccc-36c41fe1c53f&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-4-1.pdf)<br/>
               Texture Minification [Video](https://classtranscribe.illinois.edu/video?id=054e26a0-0ac2-4e47-b2f9-09910441286b&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-4-2.pdf)"
   title: "Texture Filtering"
 -
-  date: "Week 12 (April 13)"
-  materials: ""
-  title: "Spring Break Day"
--
-  date: "Week 12 (April 15)"
+  date: "Week 12 (April 1)"
   materials: "Cube Maps [Video](https://classtranscribe.illinois.edu/video?id=b8b41f09-e833-48a4-9a2a-ace57e6c2479&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-5.pdf)<br/>
               Normal Maps [Video](https://classtranscribe.illinois.edu/video?id=48ce1dde-279f-43cf-b32f-db27a809cfd8&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-6.pdf)"
   title: "Environment and Bump Mapping"
 -
-  date: "Week 13 (April 20)"
+  date: "Week 13 (April 6)"
   materials: "A Physics Engine [Video](https://classtranscribe.illinois.edu/video?id=4800e988-4f5d-4559-a3bc-beae3f3cfd3d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Physics.pdf)<br/>
               Collision Detection [Video](https://classtranscribe.illinois.edu/video?id=9216122a-bd3b-4641-ab4f-8080949c624b&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Collide.pdf) <br/>
               Euler's Method [Video](https://classtranscribe.illinois.edu/video?id=bd611499-ac64-4766-98c2-c3eeaebb16e2&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-EulersMethod.pdf)"
   title: "Physics Simulation"
 -
-  date: "Week 13 (April 22)"
+  date: "Week 12 (April 8)"
+  materials: ""
+  title: "**No Lecture: Engineering Open House**"
+-
+  date: "Week 13 (April 13)"
   materials: "Line Rasterization [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/07-1%20Line%20Rasterization.pdf) <br/>
               Polygon Rasterization [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/CS418-PolygonRasterization.pdf) <br/>
               [Video](https://classtranscribe.illinois.edu/video?id=77168516-77f4-421e-bb14-afcfd6596dfb&from=sharedlink)"
   title: "Rasterization"
 -
-  date: "Week 14 (April 27)"
+  date: "Week 14 (April 15)"
   materials: "Bezier Curves [Video](https://classtranscribe.illinois.edu/video?id=4d21ccd0-fa3d-41a1-b5ac-e0337f7a6951&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-BezCurves.pdf) <br/>
               Bezier Surfaces [Video](https://classtranscribe.illinois.edu/video?id=33d4bdbd-0b51-4e59-8457-0006b65f618f&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-BezPatch.pdf)"
   title: "Geometric Modeling"
 -
-  date: "Week 14 (April 29)"
+  date: "Week 14 (April 20)"
+  materials: "Subdivision Surfaces [Video](https://classtranscribe.illinois.edu/video?id=1dffdfe6-8f36-44c6-abb1-fc4c391b7b2a&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/418-Subdivision.pdf)"
+  title: "Geometric Modeling"
+-
+ date: "Week 14 (April 22)"
+  materials: "Subdivision Surfaces [Video](https://classtranscribe.illinois.edu/video?id=1dffdfe6-8f36-44c6-abb1-fc4c391b7b2a&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/418-Subdivision.pdf)"
+  title: "Geometric Modeling"
+-
+ date: "Week 14 (April 27)"
+  materials: "Subdivision Surfaces [Video](https://classtranscribe.illinois.edu/video?id=1dffdfe6-8f36-44c6-abb1-fc4c391b7b2a&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/418-Subdivision.pdf)"
+  title: "Geometric Modeling"
+-
+ date: "Week 14 (April 29)"
   materials: "Subdivision Surfaces [Video](https://classtranscribe.illinois.edu/video?id=1dffdfe6-8f36-44c6-abb1-fc4c391b7b2a&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/418-Subdivision.pdf)"
   title: "Geometric Modeling"
 -
