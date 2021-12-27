@@ -32,12 +32,12 @@ We recommend the following courses and skills:
 
 The course will be taught using online lectures along with suggested additional reading materials.
 
-+ Lectures videos and notes will be available **[here](https://illinois-cs418.github.io/schedule) with new lectures available Tuesday of each week.**
++ Lectures videos and notes will be available **[here](https://illinois-cs418.github.io/schedule).**
 + Additional reading may be assigned from **resources listed [here](https://illinois-cs418.github.io/resources).**
 
 ### Lectures ###
 
-**You can attend live lectures/discussions at 11am Central Time on Thursdays at this [Zoom link](https://illinois.zoom.us/j/81462506478?pwd=NmVKMmJZRk5WcXJIZ2RGTmJxOTl2Zz09)**.
+**You can attend live lectures/discussions at 11am Central Time on Wednesdays**.
 + We will focus on actively working through problems and doing code walkthroughs... 
 + These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
@@ -122,9 +122,7 @@ We will use Campuswire for answering questions. Use the code 5240 to join as a s
 See the [schedule for office hours](/officehours).
 
 * Professor Eric Shaffer, shaffer1@illinois.edu
-* TA:  Jason Situ junsitu2@illinois.edu
-* CA:  Ian Rudnick 
-* CA:  Jacob Elling
+* TA:  
 
 #### Mental Health ####
 Diminished mental health, including significant stress, mood changes, excessive worry, substance/alcohol abuse, or problems with eating and/or sleeping can interfere with optimal academic performance, social development, and emotional wellbeing. The University of Illinois offers a variety of confidential services including individual and group counseling, crisis intervention, psychiatric services, and specialized screenings at no additional cost. If you or someone you know experiences any of the above mental health concerns, it is strongly encouraged to contact or visit any of the University’s resources provided below. Getting help is a smart and courageous thing to do -- for yourself and for those who care about you.
