@@ -1,6 +1,6 @@
 **Submit all the files needed to run your app including gl-matrix-min.js or similar library files**
 
-Submit the files in **zipped** folder to Compass.
+Submit the files in **zipped** folder to Canvas.
 
 Use the following naming conventions for your files:
 
