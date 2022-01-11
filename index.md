@@ -47,7 +47,7 @@ The course will be taught using live and online lectures along with additional r
 + These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
 
-**The current plan is not to have a live lecture on Fridays, but instead for asynchronous videos and exams**
+**The current plan is not to have a live lecture on Fridays, but instead use it for asynchronous videos and exams**
 
 ## Assessments ##
 
