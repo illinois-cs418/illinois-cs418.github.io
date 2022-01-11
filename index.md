@@ -116,7 +116,7 @@ The course grade cutoffs can be expected to be:
 See the [schedule for office hours](/officehours).
 
 * Professor Eric Shaffer, shaffer1@illinois.edu
-* TA: Linda Chang  
+* TA: Linda Chang, lindac2@illinois.edu  
 
 #### Mental Health ####
 Diminished mental health, including significant stress, mood changes, excessive worry, substance/alcohol abuse, or problems with eating and/or sleeping can interfere with optimal academic performance, social development, and emotional wellbeing. The University of Illinois offers a variety of confidential services including individual and group counseling, crisis intervention, psychiatric services, and specialized screenings at no additional cost. If you or someone you know experiences any of the above mental health concerns, it is strongly encouraged to contact or visit any of the University’s resources provided below. Getting help is a smart and courageous thing to do -- for yourself and for those who care about you.
