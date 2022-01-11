@@ -22,11 +22,15 @@ The topics we will cover include:
 
 We will learn how to implement 3D web applications using WebGL and JavaScript. WebGL shares many of the same characteristics as Vulkan, Direct3D, and other popular low-level graphics APIs, so the skills you learn should be transferable.
 
-#### Prerequisites ####
-We recommend the following courses and skills:
+## Communication ##
 
-- [CS 225](https://courses.engr.illinois.edu/cs225/){:target="_blank" rel="noopener"} - prior general programming experience
-- [Math 225](https://math.illinois.edu/resources/department-resources/syllabus-math-225){:target="_blank" rel="noopener"} or [Math 415](https://math.illinois.edu/resources/department-resources/syllabus-math-415){:target="_blank" rel="noopener"} - basic linear algebra, especially 3D transforms
+#### [Campuswire](https://campuswire.com/p/GCA3888BE) ####
+We will use Campuswire for answering questions. Use the code 7365 to join as a student.
+
++ For any question involving a grade you should select `Post to instructors and TAs`.
++ We will attempt to help debug upon request but ultimately debugging is your responsibility.
++ When you ask for help debugging, provide a clear statement of the bug behavior and how you attempted to debug so far.
++ You are allowed to post code snippets when asking for help debugging.
 
 ## Instructional Content ##
 
@@ -43,6 +47,7 @@ The course will be taught using live and online lectures along with additional r
 + These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
 
+**The current plan is not to have a live lecture on Fridays, but instead for asynchronous videos and exams**
 
 ## Assessments ##
 
@@ -66,9 +71,9 @@ If you are taking the course for 4 credits, you will complete an extra project i
 ### Exams ###
 This class will have exams and no final exam. Each exam is on [PrairieLearn](https://prairielearn.engr.illinois.edu/pl).
 
-- Exam 1: 11am-12pm, Feb. 25, 2021 
-- Exam 2: 11am-12pm, April 1, 2021
-- Exam 3: 11am-12pm, May 4, 2021
+- Exam 1: 11am-12pm, Feb. 18, 2022 
+- Exam 2: 11am-12pm, March 25, 2022
+- Exam 3: 11am-12pm, May 4, 2022
 
 The exams will be online using Prairielearn. **They will be synchronous and will last for 1 hour from 11am-12pm Central Time on the day of the exam**
 They are open web - you can use any reference material you wish while taking the exam. You should not collaborate with other people. Any instances of collaboration will be considered a violation of academic integrity and will result in a 0 on the exam and a letter grade reduction in the final course grade. Also, the nature of the exam will make collaboration unhelpful - you will get a better grade working on your own rather than wasting time trying to work together.  
@@ -107,22 +112,11 @@ The course grade cutoffs can be expected to be:
 | 60% | D- |  
 | 0%  | F  |
 
-
-## Communication ##
-
-#### [Campuswire](https://campuswire.com/p/GCA3888BE) ####
-We will use Campuswire for answering questions. Use the code 7365 to join as a student.
-
-+ For any question involving a grade you should select `Post to instructors and TAs`.
-+ We will attempt to help debug upon request but ultimately debugging is your responsibility.
-+ When you ask for help debugging, provide a clear statement of the bug behavior and how you attempted to debug so far.
-+ You are allowed to post code snippets when asking for help debugging.
-
 #### Course Staff ####
 See the [schedule for office hours](/officehours).
 
 * Professor Eric Shaffer, shaffer1@illinois.edu
-* TA:  
+* TA: Linda Chang  
 
 #### Mental Health ####
 Diminished mental health, including significant stress, mood changes, excessive worry, substance/alcohol abuse, or problems with eating and/or sleeping can interfere with optimal academic performance, social development, and emotional wellbeing. The University of Illinois offers a variety of confidential services including individual and group counseling, crisis intervention, psychiatric services, and specialized screenings at no additional cost. If you or someone you know experiences any of the above mental health concerns, it is strongly encouraged to contact or visit any of the University’s resources provided below. Getting help is a smart and courageous thing to do -- for yourself and for those who care about you.
