@@ -13,7 +13,7 @@ permalink: /
 Interactive Computer Graphics is about the techniques and technologies used to generate synthetic digital imagery in real-time. The main focus of the course will be 3D photorealistic rendering and the current rendering methods used in games and other interactive applications.
 
 The topics we will cover include:
-+ Geoemetric modeling
++ Geometric modeling
 + Mathematics for animation and rendering
 + Shading and programmable shaders
 + Rasterization
