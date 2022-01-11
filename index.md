@@ -37,16 +37,15 @@ The course will be taught using online lectures along with suggested additional 
 
 ### Lectures ###
 
-**You can attend live lectures/discussions at 11am Central Time on Wednesdays**.
+**You can attend live lectures/discussions at 11am Central Time on Wednesdays in [Room 103 Transportation Building 104 S. Mathews Ave.](https://www.google.com/maps/place/Transportation+Building/@40.1117016,-88.2253098,15z/data=!4m5!3m4!1s0x0:0x8fc3be7e3545974b!8m2!3d40.1117016!4d-88.2253098)**.
 + We will focus on actively working through problems and doing code walkthroughs... 
 + These lectures will be recorded and available on the [course schedule](https://illinois-cs418.github.io/schedule). 
 + Additional lectures will be available as asynchronous video links posted on the [course schedule](https://illinois-cs418.github.io/schedule).  
-+ We know attending online synchronous lectures can be difficult, so there is no required attendance. 
 
 
 ## Assessments ##
 
-Assigned work will include 10 quizzes, 6 programming assignments and 3 exams.<br/>
+Assigned work will include 10 quizzes, 5 programming assignments and 3 exams.<br/>
 There will be an additional project for students taking the course for 4 credits.
 
 ### Weekly Quizzes ###
