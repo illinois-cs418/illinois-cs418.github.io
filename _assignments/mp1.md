@@ -2,7 +2,7 @@
 layout: assignment
 title: "MP1: Dancing Logo"
 index: 10
-due: "Feb. 16, 2021 @ 11:59 PM"
+due: "Feb. 3, 2022 @ 11:59 PM"
 material: ~
 points: 10
 rubric:
@@ -129,7 +129,7 @@ var triangleVertices = [0.0,0.0,0.0];
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.DYNAMIC_DRAW);
 
 ~~~
-    
+
 Here, the variable `pointOffset` is a global that is updated each frame...so before each time we draw we have to bind the vertex position buffer and call `gl.bufferData` to send the new vertex positions to the GPU.
 
  The motion for this animation should be something non-uniform that cannot easily be implemented as an affine transformation. For example, make the logo dance like a vertical sine curve. This part of the animation could be data driven using a table of pre-defined vertex positions for the motion. The motion can also be keyframed, so the vertices are linearly interpolated from one keyframe location to a second keyframe location.  When modifying the vertex positions by changing the coordinates in the buffer, make sure you use `gl.DYNAMIC_DRAW` when invoking `gl.bufferData`.
@@ -177,3 +177,9 @@ if (document.getElementById("I").checked == true)
 Based on which button is checked, you will choose which VAO to bind before calling `gl.drawArrays`. if you use a different shader program for your second animation, you will need to specify which program to use by invoking `gl.useProgram`.
 
 **Be aware that using multiple shader programs requires attention to detail.** The attribute variables may have different names and indices so you need to make sure you use the correct ones when setting up the VAOs. The uniform variables may also have different names and indices and you will need to use the correct ones when calling `gl.uniformMatrix4fv` to send a matrix to the shader program, for example. You are not required to use two different shader programs for this MP.
+
+## Important Notes
+1. Read the submission instructions carefully!
+If you are missing some files, but we can still grade, you will lose 20%.
+If we cannot grade your work due to missing files, you will receive no credit.
+2. You code must have comments for each function explaining what that function does, using the [Google JS commenting style](https://google.github.io/styleguide/jsguide.html#formatting-comments)
