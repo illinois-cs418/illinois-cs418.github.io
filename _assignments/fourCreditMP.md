@@ -1,7 +1,7 @@
 ---
 layout: assignment
 title: "4 Credit MP: Ray Tracing"
-index: 1
+index: 10
 due: "May 4, 2022 @ 11:59 PM"
 material: ~
 points: 100
@@ -46,7 +46,6 @@ rubric:
     name: Creativity
     points: 20
     description: Do something interesting and visually unique in your scene...maybe texturing
-    
 ---
 
 ![Tracing](/img/ray-tracing.jpg){:height="400px" width="600px"}   
