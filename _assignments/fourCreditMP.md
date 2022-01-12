@@ -30,7 +30,7 @@ rubric:
     name: Instances
     points: 10
     description: Render a non-trivial number of spheres by using instancing
-    -
+  -
     name: Bounding Volume Hierarchy
     points: 20
     description: You should implement a BVH to make your tracer more performant
