@@ -7,7 +7,7 @@ title: Assignments
 ## Development Environment Information ##
 
 We will use HTML/JavaScript/WebGL and GLSL for the programming assignments. No prior knowledge of these is required for the class.
-Code examples in the course use WebGL 1.0. You are encouraged to use that version as well.
+Code examples in the course use WebGL 2.0. You are encouraged to use that version as well.
 
 You may develop using any environment you wish. You just need a editor or development environment in which to write the code and browser in which to test. Here are some useful resources:
 
