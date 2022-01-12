@@ -1,50 +1,50 @@
 ---
 layout: assignment
 title: "4 Credit MP: Ray Tracing"
-index: 10
-due: "May 10, 2021 @ 11:59 PM"
+index: 1
+due: "May 4, 2022 @ 11:59 PM"
 material: ~
-points: 10
+points: 100
 rubric:
   -
     name: Positionable camera
-    points: 1
+    points: 10
     description: Implement a camera you can position in the scene...choose an interesting view in for your scene
   - 
     name: Spheres
-    points: 1
+    points: 10
     description: Be able to render spheres of different sizes
   -
     name: Diffuse material
-    points: 1
+    points: 5
     description: Some spheres should be rendered as diffuse surafces
   - 
     name: Metal material
-    points: 1
+    points: 5
     description: Some spheres should be rendered as metallic surfaces (mirrors are nice)
   - 
     name: Dielectrics
-    points: 1
+    points: 10
     description: Some spheres should be glass....
   - 
     name: Instances
-    points: 1
+    points: 10
     description: Render a non-trivial number of spheres by using instancing
-  -
+    -
     name: Bounding Volume Hierarchy
-    points: 1
+    points: 20
     description: You should implement a BVH to make your tracer more performant
   - 
     name: Plane
-    points: 1
+    points: 5
     description: Render a geometric plane as a floor for your scene
   - 
     name: Shadows
-    points: 1
+    points: 5
     description: Support shadows...can be hard shadows using a point light
   - 
     name: Creativity
-    points: 1
+    points: 20
     description: Do something interesting and visually unique in your scene...maybe texturing
     
 ---
@@ -76,7 +76,7 @@ You can write out your image to any common image file format. You can use the PP
 
 **3. What should the resolution of the image be?**
 
-Use at least 500x500. You can make it begger if you wish or use a different aspect ration (e.g. 4:3).
+Use at least 500x500. You can make it bigger if you wish or use a different aspect ration (e.g. 4:3).
 
 **4. Can I use a math library for vector types and functions (e.g. cross product)?**
 
@@ -108,7 +108,7 @@ The Shirley books include a lot of good advice on debugging, but I'll mention th
 
 ## A Word About Creativity ##
 
-For the point for creativity, in addition to your scene not being the same as someone else's scene, you should implement some other feature. Texturing (like the procedural checkerboard in the book) is one option...or image texturing or area lights or rendering meshes. Do something that looks good.
+For the points for creativity, in addition to your scene not being the same as someone else's scene, you should implement some other feature. Texturing (like the procedural checkerboard in the book) is one option...or image texturing or area lights or rendering meshes. Do something that looks good.You are expected to make a substantial effort producing a unique and interesting scene.
 
 ## Submission ###
 
