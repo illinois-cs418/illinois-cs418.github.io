@@ -1,7 +1,7 @@
 - 
   date: "Week 1 (Jan 19)"
   materials: "**Live [Zoom Link](https://illinois.zoom.us/j/84164517055?pwd=dThyTzBsRjh4VUVpTXR2WitJcmdRUT09)** <br/><br/>
-  Introduction to WebGL [Video](https://classtranscribe.illinois.edu/video?id=4405c914-71a9-457f-8d1c-eabf07b4a393&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-WebGL.pdf) <br/>
+  Introduction to WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-WebGL.pdf) <br/>
           [HelloTriangle.html](https://illinois-cs418.github.io/Examples/WebGL2/HelloTriangle/HelloTriangle.html)<br/><br/>
 Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/video?id=1861db1e-bf3a-4a04-be97-192d5f2494f3&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-1-DigitalImages.pdf) <br/>
           Rendering [Video ](https://classtranscribe.illinois.edu/video?id=9dee4b37-9fd4-4efb-aa48-7cd433cb4c0d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-2-Rendering.pdf) <br/>
