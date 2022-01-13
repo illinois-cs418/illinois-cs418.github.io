@@ -33,7 +33,8 @@ We will sometimes post suggested reading from the following:
 ![Fundamentals of Computer Graphics 4th Edition by Steve Marschner, Peter Shirley](/img/shirley.jpg){:height="200px" width="160px"}
 
 _Fundamentals of Computer Graphics 4th Edition_ by Steve Marschner, Peter Shirley  
-[UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99945011412205899)
+[UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99954932862505899
+)
 <br/>
 <br/>
 <br/>
