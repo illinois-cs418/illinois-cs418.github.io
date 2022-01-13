@@ -58,7 +58,7 @@ There will be an additional project for students taking the course for 4 credits
 There will be short weekly quizzes on [PrairieLearn](https://www.prairielearn.org/pl/course_instance/129029). 
 + **Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
 + **They will be assigned on a Wednesday and due at 11:59PM on Wednesday of the following week.**
-+ **After the due date, quizzes can still be completed late for 50% credit at any time before May 9.**
++ **After the due date, quizzes can still be completed late for 50% credit at any time before May 4.**
 + These quizzes will be based on the lecture material and will serve as practice for the exams.
 
 ### Programming Assignments ###
