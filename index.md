@@ -57,7 +57,7 @@ There will be an additional project for students taking the course for 4 credits
 ### Quizzes ###
 There will be short weekly quizzes on [PrairieLearn](https://prairielearn.engr.illinois.edu/pl). 
 + **Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
-+ **They will be assigned on a Monday and due at 11:59PM on Monday of the following week.**
++ **They will be assigned on a Wednesday and due at 11:59PM on Wednesday of the following week.**
 + **After the due date, quizzes can still be completed late for 50% credit at any time before May 9.**
 + These quizzes will be based on the lecture material and will serve as practice for the exams.
 
