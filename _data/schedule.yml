@@ -1,9 +1,13 @@
 - 
   date: "Week 1 (Jan 19)"
-  materials: "Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/video?id=1861db1e-bf3a-4a04-be97-192d5f2494f3&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-1-DigitalImages.pdf) <br/>
+  materials: "Live [Zoom Link]() <br/>
+  Introduction to WebGL [Video](https://classtranscribe.illinois.edu/video?id=4405c914-71a9-457f-8d1c-eabf07b4a393&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-WebGL.pdf) <br/>
+          [HelloTriangle.html](https://illinois-cs418.github.io/Examples/WebGL2/HelloTriangle/HelloTriangle.html)<br/>
+Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/video?id=1861db1e-bf3a-4a04-be97-192d5f2494f3&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-1-DigitalImages.pdf) <br/>
           Rendering [Video ](https://classtranscribe.illinois.edu/video?id=9dee4b37-9fd4-4efb-aa48-7cd433cb4c0d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-2-Rendering.pdf) <br/>
           Rasterization [Video](https://classtranscribe.illinois.edu/video?id=d7009251-ce8e-4ac6-bd99-74c3d928a928&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-3-Rasterization.pdf)"
-  title:  "Color and Rendering"
+  title:  "Course Orientation<br/>
+           Color and Rendering"
 - 
   date: "Week 1 (Jan 21)"
   materials: " Geometric Modeling: Surface Meshes [Video](https://classtranscribe.illinois.edu/video?id=f7708341-1dd8-45e6-96b0-6797aa9953f3&from=sharedlink)&nbsp; [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-3-2-Meshes.pdf)<br/>
@@ -11,9 +15,8 @@
   title: "Geometric Modeling" 
 - 
   date: "Week 2 (Jan 26)"
-  materials: " Introduction to WebGL [Video](https://classtranscribe.illinois.edu/video?id=4405c914-71a9-457f-8d1c-eabf07b4a393&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-WebGL.pdf) <br/>
-          [HelloTriangle.html](https://illinois-cs418.github.io/Examples/WebGL2/HelloTriangle/HelloTriangle.html)"
-  title: "Course Orientation and WebGL Intro"
+  materials: "**[MP1 Assignment](https://illinois-cs418.github.io/assignments/mp1.html)"
+  title: "MP1 Walkthrough"
 - 
   date: "Week 2 (Jan 28)"
   materials: ""
@@ -40,8 +43,8 @@
   title: "Basic Shading"
 -
   date: "Week 5 (Feb 18)"
-  materials: ""
-  title: "Normal Vectors" 
+  materials: "[Exam Link]()"
+  title: "**Exam 1**" 
 -
   date: "Week 6 (Feb 23)"
   materials: ""
@@ -85,7 +88,7 @@
 -
   date: "Week 11 (March 30)"
   materials: "[Exam Link]()"
-  title: "Exam 2"
+  title: "**Exam 2**"
 -
   date: "Week 11 (April 1)"
   materials: ""
