@@ -55,7 +55,7 @@ Assigned work will include 10 Quizzes, 5 programming assignments and 3 exams.<br
 There will be an additional project for students taking the course for 4 credits.
 
 ### Quizzes ###
-There will be short weekly quizzes on [PrairieLearn](https://prairielearn.engr.illinois.edu/pl). 
+There will be short weekly quizzes on [PrairieLearn](https://www.prairielearn.org/pl/course_instance/129029). 
 + **Each quiz can be taken repeatedly..you can retake it till you get all the questions correct**
 + **They will be assigned on a Wednesday and due at 11:59PM on Wednesday of the following week.**
 + **After the due date, quizzes can still be completed late for 50% credit at any time before May 9.**
