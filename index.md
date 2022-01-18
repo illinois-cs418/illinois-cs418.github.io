@@ -32,6 +32,9 @@ We will use Campuswire for answering questions. Use the code 7365 to join as a s
 + When you ask for help debugging, provide a clear statement of the bug behavior and how you attempted to debug so far.
 + You are allowed to post code snippets when asking for help debugging.
 
+#### Office Hours ####
+Eric 10am Thursdays [Zoom Link](https://illinois.zoom.us/j/83511392964?pwd=dk5BZlFzaG5ZQnFNakF1QlZJNHV5UT09)
+
 ## Instructional Content ##
 
 The course will be taught using live and online lectures along with additional reading materials.
