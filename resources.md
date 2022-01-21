@@ -21,6 +21,9 @@ permalink: /resources
 + Use the most recent version of the library [glMatrix Library Download](https://glmatrix.net/)
 + API Reference: [glMatrix Library Docs](https://glmatrix.net/docs/)
 
+### GLSL ###
++ Shaderific [GLSL Reference](https://www.shaderific.com/glsl)
+
 ### WebGL Debugging ###
 + Browser extension for debugging [spector.js](https://spector.babylonjs.com/)
 + Programmtically debugging WebGL: [webgl-debug.js documentation](https://www.khronos.org/webgl/wiki/Debugging)
