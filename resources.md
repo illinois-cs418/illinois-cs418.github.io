@@ -49,6 +49,6 @@ _3D Math Primer for Graphics and Game Development 2nd Edition_ by Fletcher Dunn 
 <br/>
 <br/>
 ![Practical Shader Development Vertex and Fragment Shaders for Game Developers](/img/shaderbook.jpg){:height="200px" width="160px"}
-_Practical Shader Development Vertex and Fragment Shaders for Game Developers_ by Kyle Halladay <br/>
+_Practical Shader Development_ by Kyle Halladay <br/>
 [UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99954908964705899)
 
