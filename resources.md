@@ -21,6 +21,9 @@ permalink: /resources
 + Use the most recent version of the library [glMatrix Library Download](https://glmatrix.net/)
 + API Reference: [glMatrix Library Docs](https://glmatrix.net/docs/)
 
+### GLSL ###
++ Shaderific [GLSL Reference](https://www.shaderific.com/glsl)
+
 ### WebGL Debugging ###
 + Browser extension for debugging [spector.js](https://spector.babylonjs.com/)
 + Programmtically debugging WebGL: [webgl-debug.js documentation](https://www.khronos.org/webgl/wiki/Debugging)
@@ -42,6 +45,11 @@ _Fundamentals of Computer Graphics 4th Edition_ by Steve Marschner, Peter Shirle
 
 _3D Math Primer for Graphics and Game Development 2nd Edition_ by Fletcher Dunn and Ian Parberry <br/>
 [UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99671950512205899)
+<br/>
+<br/>
+<br/>
+![Practical Shader Development Vertex and Fragment Shaders for Game Developers](/img/shaderbook.jpg){:height="200px" width="160px"}
 
-
+_Practical Shader Development_ by Kyle Halladay <br/>
+[UIUC Library E-book link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99954908964705899)
 
