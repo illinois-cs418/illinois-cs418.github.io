@@ -17,11 +17,13 @@ Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/v
   title: "Geometric Modeling" 
 - 
   date: "Week 2 (Jan 26)"
-  materials: "**[MP1 Assignment](https://illinois-cs418.github.io/assignments/mp1.html)**"
+  materials: "**[MP1 Assignment](https://illinois-cs418.github.io/assignments/mp1.html) Due Feb 6** <br/>
+               Animation in WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-5-1-Animation.pdf)"
   title: "MP1 Walkthrough"
 - 
   date: "Week 2 (Jan 28)"
-  materials: ""
+  materials: "Transformations: Scale and Translation [Video](https://classtranscribe.illinois.edu/video?id=4f3806ff-6106-41de-911f-ea3ad9d80a97&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-4-1-Affine Transformations.pdf) <br/>
+              Transformations: Rotations and 3D [Video](https://classtranscribe.illinois.edu/video?id=c4ff26cb-2a4c-4ea0-8d35-b586892a62c1&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-4-2-Affine Transformations.pdf)"
   title: "Affine Transformations"
 - 
   date: "Week 3 (Feb 2)"
