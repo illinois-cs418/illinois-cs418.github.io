@@ -7,7 +7,7 @@ Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/v
           Rendering [Video ](https://classtranscribe.illinois.edu/video?id=9dee4b37-9fd4-4efb-aa48-7cd433cb4c0d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-2-Rendering.pdf) <br/>
           Rasterization [Video](https://classtranscribe.illinois.edu/video?id=d7009251-ce8e-4ac6-bd99-74c3d928a928&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-1-3-Rasterization.pdf)
           <br/><br/>
-          **[Quiz 1 Link Due 1/27](https://www.prairielearn.org/pl/course_instance/129029/assessment/2316394)**"
+          **[Quiz 1 Link Due 1/30](https://www.prairielearn.org/pl/course_instance/129029/assessment/2316394)**"
   title:  "Course Orientation<br/><br/>
            Color and Rendering"
 - 
@@ -17,8 +17,10 @@ Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/v
   title: "Geometric Modeling" 
 - 
   date: "Week 2 (Jan 26)"
-  materials: "**[MP1 Assignment](https://illinois-cs418.github.io/assignments/mp1.html) Due Feb 6** <br/>
-               Animation in WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-5-1-Animation.pdf)"
+  materials: "**[Quiz 2 Link Due 2/2](https://www.prairielearn.org/pl/course_instance/129029/assessment/2316826)** <br/>
+  **[MP1 Assignment](https://illinois-cs418.github.io/assignments/mp1.html) Due Feb 6** <br/><br/>
+               Animation in WebGL [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-5-1-Animation.pdf)<br/>
+          [Lecture Video](https://echo360.org/media/d3a69948-f22d-467e-9327-4e3e9d5240fa/public)"
   title: "MP1 Walkthrough"
 - 
   date: "Week 2 (Jan 28)"
