@@ -31,8 +31,9 @@ Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/v
 - 
   date: "Week 3 (Feb 2)"
   materials: "**Live [Zoom Link](https://illinois.zoom.us/j/84164517055?pwd=dThyTzBsRjh4VUVpTXR2WitJcmdRUT09)** <br/><br/>
-                "
-  title: "Projections"
+                View Transformation [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-7-1-clean.pdf) <br/>
+                Ortho Transformation [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/CS418-Lecture9-OrthoProjection.pdf)"
+  title: "A Camera Model"
 -
   date: "Week 3 (Feb 4)"
   materials: "Data Structures for Meshes [Video](https://classtranscribe.illinois.edu/video?id=7fc8e9ad-0891-4f09-811a-d55cdd713b14&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-3-3-MeshStructures.pdf) <br/>
@@ -42,11 +43,11 @@ Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/v
 -
   date: "Week 4 (Feb 9)"
   materials: ""
-  title: "Orthographic Projection"
+  title: "Perspective Projection"
 -
   date: "Week 4 (Feb 11)"
   materials: ""
-  title: "A Perpsective Camera Model"  
+  title: "Basic Shading"  
 -
   date: "Week 5 (Feb 16)"
   materials: ""
