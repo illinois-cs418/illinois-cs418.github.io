@@ -52,12 +52,13 @@ Color and Digital Display Devices [Video](https://classtranscribe.illinois.edu/v
   title: "Perspective Projection"
 -
   date: "Week 4 (Feb 11)"
-  materials: "Phong Reflection Model [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Shading-2021.pdf) <br/>
-Normal Vectors [Video](https://classtranscribe.illinois.edu/video?id=94f487e9-19b4-415a-8af5-1f6e61418bc9&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-13-1-Normals.pdf)"
-  title: "Basic Shading"  
+  materials: "
+Normal Vectors [Video](https://classtranscribe.illinois.edu/video?id=94f487e9-19b4-415a-8af5-1f6e61418bc9&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-13-1-Normals.pdf) <br/>
+Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1-950a-dcdf0a071bab&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-14-Culling.pdf)"
+  title: "Surface Normal Vectors"  
 -
   date: "Week 5 (Feb 16)"
-  materials: ""
+  materials: "Phong Reflection Model [Video]()&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Shading-2021.pdf)"
   title: "Basic Shading"
 -
   date: "Week 5 (Feb 18)"
@@ -66,11 +67,11 @@ Normal Vectors [Video](https://classtranscribe.illinois.edu/video?id=94f487e9-19
 -
   date: "Week 6 (Feb 23)"
   materials: ""
-  title: "Geometric Modeling" 
+  title: "MP2 Walkthrough" 
 -
   date: "Week 6 (Feb 25)"
   materials: ""
-  title: "MP2 Walkthrough"
+  title: "Terrain Modeling"
 -
   date: "Week 7 (March 2)"
   materials: ""
