@@ -62,7 +62,10 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
   title: "Surface Normal Vectors"  
 -
   date: "Week 5 (Feb 16)"
-  materials: "Phong Reflection Model [Video]()&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Shading-2021.pdf)"
+  materials: "**Live [Zoom Link](https://illinois.zoom.us/j/84164517055?pwd=dThyTzBsRjh4VUVpTXR2WitJcmdRUT09)** <br/><br/>
+          Phong Reflection Example Code [Terrain.html](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/MP2.html)<br/>
+                                         [Terrain.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/Terrain.js)<br/>
+  Phong Reflection Model [Video]()&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Shading-2021.pdf)"
   title: "Basic Shading"
 -
   date: "Week 5 (Feb 18)"
