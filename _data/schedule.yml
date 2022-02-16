@@ -64,7 +64,7 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
   date: "Week 5 (Feb 16)"
   materials: "**Live [Zoom Link](https://illinois.zoom.us/j/84164517055?pwd=dThyTzBsRjh4VUVpTXR2WitJcmdRUT09)** <br/><br/>
           Phong Reflection Example Code GLSL [Terrain.html](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/MP2.html)<br/>
-           Phong Reflection Example Code JS  [Terrain.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/Terrain.js)<br/>
+           Phong Reflection Example Code JS  [MP2.js](https://github.com/illinois-cs418/illinois-cs418.github.io/raw/master/Examples/WebGL2/Terrain/Terrain.js)<br/>
   Phong Reflection Model [Video]()&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Shading-2021.pdf)"
   title: "Basic Shading"
 -
