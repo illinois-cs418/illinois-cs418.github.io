@@ -17,4 +17,4 @@ In the file name, replace N with the number of the MP (e.g. MP1.html).<br/>
 You should also include any additional files you use or have written.<br/> 
 In particular you can use the glMatrix library gl-matrix-min.js.<br/>
 
-Name your submission as  NETID_MPN.zip and submit it to Canva, where  NETID is your netid and N is the MP number. This MP (as are the other MP's) is more than just an assignment for a grade to verify graphics programming proficiency. It is also an opportunity to impress me, your friends/family and your future employer or graduate school.
+Name your submission as  NETID_MPN.zip and submit it to Canvas, where  NETID is your netid and N is the MP number. This MP (as are the other MP's) is more than just an assignment for a grade to verify graphics programming proficiency. It is also an opportunity to impress me, your friends/family and your future employer or graduate school.
