@@ -79,7 +79,11 @@ This class will have exams and no final exam. Each exam is on [PrairieLearn](htt
 - Exam 3: 11am-12pm, May 4, 2022
 
 The exams will be online using Prairielearn. **They will be synchronous and will last for 1 hour from 11am-12pm Central Time on the day of the exam**
-They are open web - you can use any reference material you wish while taking the exam. You should not collaborate with other people. Any instances of collaboration will be considered a violation of academic integrity and will result in a 0 on the exam and a letter grade reduction in the final course grade. Also, the nature of the exam will make collaboration unhelpful - you will get a better grade working on your own rather than wasting time trying to work together.  
+They are open web - you can use any reference material you wish while taking the exam. You should not collaborate with other people. Any instances of collaboration will be considered a violation of academic integrity and will result in a 0 on the exam and a letter grade reduction in the final course grade. Also, the nature of the exam will make collaboration unhelpful - you will get a better grade working on your own rather than wasting time trying to work together.
+
+### Extra Credit ###
+
+There will be one extra quiz, available April 27 through May 4, that you can use to raise your lowest exam score by up to 30%. Same rules as other quizzes...you get to take it repeatedly over the last week of class until you are happy with the score. It will be the same approximate length and level of difficulty as the other quizzes.
 
 ## Grades ##
 We will post grades on [Canvas](){:target="_blank" rel="noopener"}.
