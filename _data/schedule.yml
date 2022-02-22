@@ -72,20 +72,23 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
   title: "**Exam 1 11am-Noon CT**" 
 -
   date: "Week 6 (Feb 23)"
-  materials: "**Live [Zoom Link](https://illinois.zoom.us/j/84164517055?pwd=dThyTzBsRjh4VUVpTXR2WitJcmdRUT09)** <br/><br/>"
-  title: "MP2 Walkthrough" 
+  materials: "**Live [Zoom Link](https://illinois.zoom.us/j/84164517055?pwd=dThyTzBsRjh4VUVpTXR2WitJcmdRUT09)** <br/><br/>
+   Terrain Generation [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-14-TerrainGeneration-fixed.pdf)""
+  title: "Terrain Modeling" 
 -
   date: "Week 6 (Feb 25)"
-  materials: ""
-  title: "Terrain Modeling"
+  materials: "Euler Angles [Video](https://classtranscribe.illinois.edu/video?id=acf73ea1-7a86-43ca-8b95-d4804765e07a&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-16-EulerAngles.pdf)<br/>
+             Quaternions [Video](https://classtranscribe.illinois.edu/video?id=9805473d-6c97-456b-af52-2679b8f3049f&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-16-Quaternions.pdf) <br/>
+             _3D Math Primer for Graphics_ Chapter 8 [UIUC Library Link](https://i-share-uiu.primo.exlibrisgroup.com/permalink/01CARLI_UIU/gpjosq/alma99671950512205899)"
+  title: "Math for Orientation"
 -
   date: "Week 7 (March 2)"
   materials: ""
-  title: "Math for Orientation" 
+  title: "Participating Media" 
 -
   date: "Week 7 (March 4)"
   materials: ""
-  title: "Participating Media"
+  title: "User Interaction"
 -
   date: "Week 8 (March 9)"
   materials: ""
@@ -93,7 +96,7 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
 -
   date: "Week 8 (March 11)"
   materials: ""
-  title: "User Interaction"
+  title: "Compositing"
 -
   date: "Week 9 (March 16)"
   materials: ""
