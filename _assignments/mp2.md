@@ -173,7 +173,7 @@ Implement the Phong illumination model with Phong shading. This means your shadi
 
 The starter code implements the Phong reflection model with _Gouraud_ shading. In order to move the computation to the fragment shader you will need to do the following:
 
-1. Send an interpolated normal vector from the vertex shader to the fragment shader.
+1. Send an interpolated normal vector from the vertex shader to the fragment shader. **Normalize this vector in the fragment shader.**
 2. Send an interpolated position value from vertex shader to the fragment shader. 
 3. Calculate the reflection vector in the fragment shader instead of the vertex shader.
 4. Send the light position and colors to the fragment shader from your JS code as `uniform` variables.
@@ -198,7 +198,7 @@ To make the calculation simpler, you should implement the following:
    in vec3 vertexPosition;
    
    uniform float minZ;
-   uniform float minZ;
+   uniform float maxZ;
    
    void main(void) {
         float  nrmZ;
