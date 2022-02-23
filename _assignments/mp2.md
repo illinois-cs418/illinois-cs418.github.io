@@ -186,7 +186,7 @@ In your shading calculation, you should assign material colors (the $$k$$ values
 
 ![Example Terraing](https://illinois-cs418.github.io/img/terrain.PNG)
 
-To make the calculation simpler, we should implementing the following:
+To make the calculation simpler, you should implement the following:
 
 1. In Terrain.js, implement methods `getMaxElevation()` and `getMinElevation()` that return the max and min $$z$$ coordinate in the terrain.
 
