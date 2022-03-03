@@ -172,9 +172,13 @@ You will update `camPosition` by calculating a displacement vector `deltaPositio
 
 #### Generating an Updated View
 
-Once you have a new `camOrientation` and `camPosition` you can generate a View matric for the current frame.
+Once you have a new `camOrientation` and `camPosition` you can generate a View matrix for the current frame.
 
 You should use `glMatrix.mat4.lookAt(out, eye, center, up)` .  Use `camPosition` for the `eye` parameter and generate correct values for `center` and `up` . To compute `up`, you should transform your initial **up** vector, usually $$(0,1,0)$$,by `camOrientation`. To compute `center`, the point in space at which you are looking, you should transform `camIntialDir` by `camOrientation` to generate the current view direction. You can than compute `center` as the sum of `camPosition` and the current view direction.
+
+#### Transforming the Light Position
+
+In MP2, a point light was defined at the constant position `lightPosition` in view coordinates. For this MP, you should **define the light position in world coordinates**. Each frame you should transform this position by the view transformation so that the light position used by the shader program will be in view coordinates. Note that if you do not transform the light position each frame, the light will appear to move with the viewer which appears unnatural.
 
 ### A Documented User Interface 
 
