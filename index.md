@@ -75,7 +75,7 @@ If you are taking the course for 4 credits, you will complete an extra project i
 This class will have exams and no final exam. Each exam is on [PrairieLearn](https://prairielearn.engr.illinois.edu/pl).
 
 - Exam 1: 11am-12pm, Feb. 18, 2022 
-- Exam 2: 11am-12pm, March 25, 2022
+- Exam 2: 11am-12pm, March 30, 2022
 - Exam 3: 11am-12pm, May 4, 2022
 
 The exams will be online using Prairielearn. **They will be synchronous and will last for 1 hour from 11am-12pm Central Time on the day of the exam**
