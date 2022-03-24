@@ -121,7 +121,8 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
   title: "Compositing"
 -
   date: "Week 10 (March 25)"
-  materials: ""
+  materials: "Texture Mapping Overview [Video](https://classtranscribe.illinois.edu/video?id=30eac58a-d232-4b79-b9a3-5d24ff69d662&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-texture.pdf)<br/>
+              Interpolation [Video](https://classtranscribe.illinois.edu/video?id=3a13845f-b49a-4efb-bf80-f0011895190d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-3.pdf)"
   title: "Texture Mapping"
 -
   date: "Week 11 (March 30)"
@@ -129,12 +130,14 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
   title: "**Exam 2**"
 -
   date: "Week 11 (April 1)"
-  materials: ""
-  title: "Texture Mapping"
+  materials: "Texture Magification [Video](https://classtranscribe.illinois.edu/video?id=5bfdda06-67f6-43a2-bccc-36c41fe1c53f&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-4-1.pdf)<br/>
+              Texture Minification [Video](https://classtranscribe.illinois.edu/video?id=054e26a0-0ac2-4e47-b2f9-09910441286b&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-4-2.pdf)"
+  title: "Texture Filtering"
 -
   date: "Week 12 (April 6)"
-  materials: ""
-  title: "Texture Filtering"
+  materials: "Cube Maps [Video](https://classtranscribe.illinois.edu/video?id=b8b41f09-e833-48a4-9a2a-ace57e6c2479&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-5.pdf)<br/>
+              Normal Maps [Video](https://classtranscribe.illinois.edu/video?id=48ce1dde-279f-43cf-b32f-db27a809cfd8&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-19-6.pdf)"
+  title: "Environment and Bump Mapping"
 -
   date: "Week 12 (April 8)"
   materials: ""
@@ -142,15 +145,15 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
 -
   date: "Week 13 (April 13)"
   materials: ""
-  title: "Environment and Bump Mapping"
+  title: "Physics Simulation"
 -
   date: "Week 13 (April 15)"
   materials: ""
-  title: "Physics Simulation"
+  title: "Raterization"
 -
   date: "Week 14 (April 20)"
   materials: ""
-  title: "Rasterization"
+  title: "Geometric Modeling"
 -
   date: "Week 14 (April 22)"
   materials: ""
@@ -162,7 +165,7 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
 -
   date: "Week 15 (April 29)"
   materials: ""
-  title: "Geometric Modeling"
+  title: "Shadows"
 -
   date: "Week 16 (May 4)"
   materials: "[Exam Link]()"
