@@ -2,7 +2,7 @@
 layout: assignment
 title: "MP3: Simulating Flight"
 index: 10
-due: "March 21, 2021 @ 11:59 PM"
+due: "March 21, 2022 @ 11:59 PM"
 material: ~
 points: 50
 rubric:
