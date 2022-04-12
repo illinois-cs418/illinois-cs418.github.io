@@ -146,11 +146,17 @@ Culling [Video](https://classtranscribe.illinois.edu/video?id=0c4b73ce-d80a-44e1
   title: "**No Lectures: Engineering Open House**"
 -
   date: "Week 13 (April 13)"
-  materials: ""
+  materials: "**[Quiz 9 Link Due 4/19](https://www.prairielearn.org/pl/course_instance/129029/assessment/2318388)** <br/><br/>
+              **[MP 5 Link Due 4/26](https://illinois-cs418.github.io/assignments/mp5.html)** <br/><br/>
+              A Physics Engine [Video](https://classtranscribe.illinois.edu/video?id=4800e988-4f5d-4559-a3bc-beae3f3cfd3d&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Physics.pdf)<br/>
+              Collision Detection [Video](https://classtranscribe.illinois.edu/video?id=9216122a-bd3b-4641-ab4f-8080949c624b&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-Collide.pdf) <br/>
+              Euler's Method [Video](https://classtranscribe.illinois.edu/video?id=bd611499-ac64-4766-98c2-c3eeaebb16e2&from=sharedlink)&nbsp;[PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/Fall2020/418-EulersMethod.pdf)"
   title: "Physics Simulation"
 -
   date: "Week 13 (April 15)"
-  materials: ""
+  materials: "Line Rasterization [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/07-1%20Line%20Rasterization.pdf) <br/>
+              Polygon Rasterization [PDF](https://github.com/illinois-cs418/cs418CourseMaterial/raw/master/Lectures/CS418-PolygonRasterization.pdf) <br/>
+              [Video](https://classtranscribe.illinois.edu/video?id=77168516-77f4-421e-bb14-afcfd6596dfb&from=sharedlink)"
   title: "Raterization"
 -
   date: "Week 14 (April 20)"
