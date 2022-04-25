@@ -16,7 +16,7 @@ rubric:
     description: Render other vertices using a warm-to-cold color scheme
 ---
 
-![gooch shading](https://illinois-cs418.github.io/img/gooch1.PNG){:height="400px" width="400px"}   
+![gooch shading](https://illinois-cs418.github.io/img/gooch1.PNG){:width="600px"}   
 
 ## Overview
 
