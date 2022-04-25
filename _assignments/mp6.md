@@ -111,7 +111,7 @@ The famous Stanford Bunny mesh in the OBJ file format can be downloaded from thi
 
 Your code should produce something similar to this image:
 
-![bunny](https://illinois-cs418.github.io/img/Bunny_With_Gooch_Shading.png){:height="200px" width="200px"}   
+![bunny](https://illinois-cs418.github.io/img/Bunny_With_Gooch_Shading.png){:width="200px"}   
 
 Obviously, the view and lighting and choice of colors will produce some differences...that's fine. It should just be similar.
 
