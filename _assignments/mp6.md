@@ -28,9 +28,8 @@ One the great advantages of programmable shaders is the ability to express creat
 
 The 1998 SIGGRAPH paper [A Non-Photorealistic Lighting Model For Automatic Technical Illustration](https://users.cs.northwestern.edu/~ago820/SIG98/gooch98.pdf) by Amy Gooch et al. describes the principles behind this approach. The two key elements are rendering objects with silhouette edges and using a cool-to-warm color palette. The difference in appearance between the Phong reflection model and Gooch shading is shown below .
 
-![dino1](illinois-cs418.github.io/img/d1.png){:height="400px" width="400px"}
-
-​    ![dino2](illinois-cs418.github.io/img/d2.png){:height="400px" width="400px"}
+![dino1](https://illinois-cs418.github.io/img/d1.png){:height="400px" width="400px"}
+![dino2](https://illinois-cs418.github.io/img/d2.png){:height="400px" width="400px"}
 
 In this assignment you will implement Gooch shading of meshes in WebGL.
 
@@ -116,7 +115,7 @@ The famous Stanford Bunny mesh in the OBJ file format can be downloaded from thi
 
 Your code should produce something similar to this image:
 
-## ![bunny](illinois-cs418.github.io/img/Bunny_With_Gooch_Shading.png){:height="400px" width="400px"}   
+![bunny](https://illinois-cs418.github.io/img/Bunny_With_Gooch_Shading.png){:height="400px" width="400px"}   
 
 Obviously, the view and lighting and choice of colors will produce some differences...that's fine. It should just be similar.
 
