@@ -16,7 +16,7 @@ rubric:
     description: Render other vertices using a warm-to-cold color scheme
 ---
 
-![gooch shading](https://illinois-cs418.github.io/img/gooch1.PNG){:width="600px"}   
+![gooch shading](https://illinois-cs418.github.io/img/gooch1.PNG){:width="800px"}   
 
 ## Overview
 
@@ -85,7 +85,7 @@ Here we have:
 + $$E$$ is the eye (viewer) position
 + $$\epsilon$$ is a small threshold value you define...
 
-If the above inequality holds at the vertex, the normal is close to making a $$90\degree$$ angle with the vector from the viewer...which means the vertex is on some sort of silhouette or feature edge. You will probably need to experiment to find a good value for $$\epsilon$$.
+If the above inequality holds at the vertex, the normal is close to making a $$90$$ degree angle with the vector from the viewer...which means the vertex is on some sort of silhouette or feature edge. You will probably need to experiment to find a good value for $$\epsilon$$.
 
 When the inequality holds, color generated for the vertex should be black $$(0,0,0,1)_{rgba}$$. If the inequality does not hold, you should use the shading method in the next section.
 
@@ -111,7 +111,7 @@ The famous Stanford Bunny mesh in the OBJ file format can be downloaded from thi
 
 Your code should produce something similar to this image:
 
-![bunny](https://illinois-cs418.github.io/img/Bunny_With_Gooch_Shading.png){:height="400px" width="400px"}   
+![bunny](https://illinois-cs418.github.io/img/Bunny_With_Gooch_Shading.png){:height="200px" width="200px"}   
 
 Obviously, the view and lighting and choice of colors will produce some differences...that's fine. It should just be similar.
 
