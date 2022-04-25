@@ -9,15 +9,14 @@ rubric:
   -
     name: Silhouette Rendering 
     points: 50
-    description: 
+    description: Render vertices on feature edges with black
   - 
     name: Gooch Shading
     points: 50
-    description: 
- 
+    description: Render other vertices using a warm-to-cold color scheme
 ---
 
-![gooch shading](illinois-cs418.github.io/img/gooch1.PNG){:height="400px" width="400px"}   
+![gooch shading](https://illinois-cs418.github.io/img/gooch1.PNG){:height="400px" width="400px"}   
 
 ## Overview
 
