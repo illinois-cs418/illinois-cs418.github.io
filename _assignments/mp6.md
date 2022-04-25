@@ -87,7 +87,7 @@ Here we have:
 
 If the above inequality holds at the vertex, the normal is close to making a $$90$$ degree angle with the vector from the viewer...which means the vertex is on some sort of silhouette or feature edge. You will probably need to experiment to find a good value for $$\epsilon$$. These computations are probbaly most easily done in the view coordinate system.
 
-When the inequality holds, the color generated for the vertex should be black $$I_{rgbs}=(0,0,0,1)$$. If the inequality does not hold, you should use the shading method in the next section.
+When the inequality holds, the color generated for the vertex should be black $$I_{rgba}=(0,0,0,1)$$. If the inequality does not hold, you should use the shading method in the next section.
 
 ### Cool-to-Warm Colors
 
