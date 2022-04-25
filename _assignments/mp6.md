@@ -76,9 +76,7 @@ We will implement each of these capabilities in the vertex shader and simply pas
 
 ### Silhouette Edges
 
-Traditionally, silhouette edges in a mesh are defined as edges shared by a forward-facing triangle and backwards facing triangle. This cannot be easily detected in the vertex shader but we can try to approximate finding vertices on a such an edge by using the formula
-
-$$(N_v \cdot (V-E))<\epsilon$$
+Traditionally, silhouette edges in a mesh are defined as edges shared by a forward-facing triangle and backwards facing triangle. This cannot be easily detected in the vertex shader but we can try to approximate finding vertices on a such an edge by using the formula $$(N_v \cdot (V-E))<\epsilon$$
 
 Here we have:
 
@@ -93,9 +91,7 @@ When the inequality holds, color generated for the vertex should be black $$(0,0
 
 ### Warm-to-Cold Colors
 
-The shading model used by Gooch et al. is
-
-$$I_{rgba}=(\frac{1+\vec{l} \cdot \vec{n}}{2})k_{cool} +(1-\frac{1+\vec{l} \cdot \vec{n}}{2})k_{warm}$$
+The shading model used by Gooch et al. is $$I_{rgba}=(\frac{1+\vec{l} \cdot \vec{n}}{2})k_{cool} +(1-\frac{1+\vec{l} \cdot \vec{n}}{2})k_{warm}$$
 
 Here we have:
 
@@ -109,7 +105,7 @@ Here we have:
 
 You can use $$I_{rgba}$$ as the final color for the vertex or add in the specular component of the Phong model...see which one looks best.
 
-### Test Case
+## Test Case
 
 The famous Stanford Bunny mesh in the OBJ file format can be downloaded from this link: [bunny.obj](https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj).
 
