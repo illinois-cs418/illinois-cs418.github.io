@@ -33,15 +33,15 @@ The 1998 SIGGRAPH paper [A Non-Photorealistic Lighting Model For Automatic Techn
 
 In this assignment you will implement Gooch shading in WebGL.
 
-### Starter Code
+## Starter Code
 
 You should use a copy of the code from [MP4](https://illinois-cs418.github.io/assignments/mp4.html) as the basis for this MP. You can remove the texture mapping code but keep the code the reads in and renders a mesh. Virtually all of the code you write for this MP will be in the vertex shader.  
 
-### Phong Reflection Model
+## Phong Reflection Model
 
 You should allow users to render the mesh using the Phong reflection model. Use Gouraud shading and any diffuse and and ambient color you wish. Use white for specular reflections. You should be able to re-use slightly modified code from [MP4](https://illinois-cs418.github.io/assignments/mp4.html) for this...simply use hardcoded material colors in the vertex shader rather than sampling a texture in the fragment shader.
 
-### User Interface
+## User Interface
 
 Your app should allow the user to rotate the mesh around the Y axis. This code should already be in place from MP4. In addition, your webpage should include a radio button the allows the user to switch between the Phong reflection model and Gooch shading. 
 
@@ -105,7 +105,7 @@ Here we have:
 
 You can use $$I_{rgba}$$ as the final color for the vertex or add in the specular component of the Phong model...see which one looks best.
 
-## Test Case
+### Test Case
 
 The famous Stanford Bunny mesh in the OBJ file format can be downloaded from this link: [bunny.obj](https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj).
 
