@@ -106,7 +106,8 @@ Here we have:
 
 You can use $$I_{rgba}$$ as the final color for the vertex or add in the specular component of the Phong model...see which one looks best.
 
-Here is an example rendering with $$b = 0.55, y = 0.3,  \alpha = 0:25, \beta = 0.5$$ The different values of $$b$$ and $$y$$ determine the strength of the overall temperature shift, where as $$\alpha$$ and $$\beta$$ determine the prominence of the object color, and the strength of the luminance shift.
+Here is an example rendering with $$b = 0.55, y = 0.3,  \alpha = 0,25, \beta = 0.5$$ The different values of $$b$$ and $$y$$ determine the strength of the overall temperature shift, where as $$\alpha$$ and $$\beta$$ determine the prominence of the object color, and the strength of the luminance shift.
+
 ![claw](https://illinois-cs418.github.io/img/claw.png){:width="200px"}  
 
 ### Test Case
