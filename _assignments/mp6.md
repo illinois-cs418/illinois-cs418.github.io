@@ -20,26 +20,26 @@ rubric:
 
 ## Overview
 
-This is an extra credit assignment that can be used to raise your lowest exam score. The maximum amount of points recovered will be $$30\%$$ of the original points possible on the exam. The percentage of points recovered will calculated by the percentage score of this assignment time $$30\%$$. So, for example if you score a $$50\%$$ on this assignment you will raise your lowest exam score by $$50\% \times 30\% = 15\%$$. Exam scores will not be raised over $$100\%$$.
+This is an extra credit assignment that can be used to raise your lowest exam score. The maximum amount of points recovered will be $$30\%$$ of the original points possible on the exam. The percentage of points recovered will calculated by the percentage score of this assignment time $$30\%$$. So, for example, if you score a $$50\%$$ on this assignment you will raise your lowest exam score by $$50\% \times 30\% = 15\%$$. Exam scores will not be raised over $$100\%$$.
 
 ##  Non-Photorealistic Shading
 
-One the great advantages of programmable shaders is the ability to express creative rendering styles in code. We have focused on photorealistic shading in this course but many other styles are possible and used. One of this is referred to as Gooch shading. This style of shading mimics that used for technical illustration where the central goal is to help people comprehend shape rather than to appear realistic.  
+One the great advantages of programmable shaders is the ability to express creative rendering styles in code. We have focused on photorealistic shading in this course, but many other styles are possible and used. One of these is referred to as Gooch shading. This style of shading mimics that used for technical illustration, where the central goal is to help people comprehend shape rather than to appear realistic.  
 
-The 1998 SIGGRAPH paper [A Non-Photorealistic Lighting Model For Automatic Technical Illustration](https://users.cs.northwestern.edu/~ago820/SIG98/gooch98.pdf) by Amy Gooch et al. describes the principles behind this approach. The two key elements are rendering objects with silhouette edges and using a cool-to-warm color palette. The difference in appearance between the Phong reflection model and Gooch shading is shown below .
+The 1998 SIGGRAPH paper [A Non-Photorealistic Lighting Model For Automatic Technical Illustration](https://users.cs.northwestern.edu/~ago820/SIG98/gooch98.pdf) by Amy Gooch et al. describes the principles behind this approach. The two key elements are rendering objects with silhouette edges and using a cool-to-warm color palette. The difference in appearance between the Phong reflection model and Gooch shading is shown below.
 
 ![dino1](https://illinois-cs418.github.io/img/d1.png){:width="400px"}
 ![dino2](https://illinois-cs418.github.io/img/d2.png){:width="400px"}
 
-In this assignment you will implement Gooch shading of meshes in WebGL.
+In this assignment you will implement Gooch shading in WebGL.
 
 ### Starter Code
 
-You should use a copy of the code from [MP4]() as the basis for this MP. You can remove the texture mapping code but keep the code the reads in and renders a mesh. Virtually all of the code you write for this MP will be in the vertex shader.  
+You should use a copy of the code from [MP4](https://illinois-cs418.github.io/assignments/mp4.html) as the basis for this MP. You can remove the texture mapping code but keep the code the reads in and renders a mesh. Virtually all of the code you write for this MP will be in the vertex shader.  
 
 ### Phong Reflection Model
 
-You should allow users to render the mesh using the Phong reflection model. Use Gouraud shading and any diffuse and and ambient color you wish. Use white for specular reflections. You should be able to re-use slightly modified code from [MP4]() for this...simply use hardcoded material colors in the vertex shader rather than sampling a texture in the fragment shader.
+You should allow users to render the mesh using the Phong reflection model. Use Gouraud shading and any diffuse and and ambient color you wish. Use white for specular reflections. You should be able to re-use slightly modified code from [MP4](https://illinois-cs418.github.io/assignments/mp4.html) for this...simply use hardcoded material colors in the vertex shader rather than sampling a texture in the fragment shader.
 
 ### User Interface
 
@@ -64,7 +64,7 @@ if (document.getElementById("gooch").checked == true)
         }
 ~~~
 
-You can use a GLSL `uniform bool`  or `uniform int` in the fragment shader to communicate whether or not the shader should use gooch shading. 
+You can use a GLSL `uniform bool`  or `uniform int` in the vertex shader to communicate whether or not the shader should use Gooch shading. 
 
 ## Gooch Shading
 
@@ -85,17 +85,17 @@ Here we have:
 + $$E$$ is the eye (viewer) position
 + $$\epsilon$$ is a small threshold value you define...
 
-If the above inequality holds at the vertex, the normal is close to making a $$90$$ degree angle with the vector from the viewer...which means the vertex is on some sort of silhouette or feature edge. You will probably need to experiment to find a good value for $$\epsilon$$.
+If the above inequality holds at the vertex, the normal is close to making a $$90$$ degree angle with the vector from the viewer...which means the vertex is on some sort of silhouette or feature edge. You will probably need to experiment to find a good value for $$\epsilon$$. These computations are probbaly most easily done in the view coordinate system.
 
-When the inequality holds, color generated for the vertex should be black $$(0,0,0,1)_{rgba}$$. If the inequality does not hold, you should use the shading method in the next section.
+When the inequality holds, the color generated for the vertex should be black $$I_{rgbs}=(0,0,0,1)$$. If the inequality does not hold, you should use the shading method in the next section.
 
-### Warm-to-Cold Colors
+### Cool-to-Warm Colors
 
 The shading model used by Gooch et al. is $$I_{rgba}=(\frac{1+\vec{l} \cdot \vec{n}}{2})k_{cool} +(1-\frac{1+\vec{l} \cdot \vec{n}}{2})k_{warm}$$
 
 Here we have:
 
-+ $$\vec{l}$$ is the uinit-length light direction (as in the Phong reflection model)
++ $$\vec{l}$$ is the unit-length light direction (as in the Phong reflection model)
 + $$\vec{n}$$ is the unit-length surface normal
 + The color $$k_{cool}=k_{blue}+\alpha k_d$$
 + The color $$k_{warm}=k_{yellow}+\beta k_d$$ 
